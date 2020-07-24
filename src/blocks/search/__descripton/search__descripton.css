@@ -1,3 +1,11 @@
 .search__descripton {
-
+  max-width: 550px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 64px;
 }
