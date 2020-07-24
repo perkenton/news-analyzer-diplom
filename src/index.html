@@ -6,32 +6,79 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная | News analyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-  <link rel="icon" href="<%=require('./images/favicon.ico')%>">
+  <!--  -->
   <script defer src="<%=htmlWebpackPlugin.files.js %>"></script>
 </head>
 <body>
 
-  <div class="page">
+  <div class="root">
+    
+    <header class="header root__section">
+      <img src="" alt="" class="logo logo_white">
 
-    <header class="header">
-
-      <nav class="menu">
-        <a href="./about.html">О проекте</a>
-        <a href="./paper.html">Аналитика</a>
+      <nav class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item"><a class="header__menu-link header__menu-link_active" href="./about.html">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="./paper.html">О проекте</a></li>
+        </ul>
       </nav>
-
+    
     </header>
 
-    <main class="">
+    <section class="search root__section">
+      <h1 class="search__title"></h1>
+      <p class="search__descripton"></p>
+      <input type="text" class="search__input">
+      <button class="search__button"></button>
+    </section>
 
-      <section class="">
-        <h1>It's a life!</h1>
-      </section>
+    <section class="preloader root__section">
+      <i class="preloader__circle"></i>
+    </section>
 
-    </main>
+    <section class="not-found root__section">
+      <img src="" alt="" class="not-found__sad-image">
+      <h2 class="not-found__title"></h2>
+      <p class="not-found__subtitle"></p>
+    </section>
 
-    <footer class="footer">
+    <section class="result root__section">
+      <h2 class="result__title"></h2>
+      <a href="" class="result__analitic-link"></a>
       
+      <div class="card">
+        <div class="card__image"></div>
+        <p class="card__published-at"></p>
+        <h3 class="card__title"></h3>
+        <p class="card__description"></p>
+        <p class="card__source-name"></p>
+      </div>
+
+      <button class="result__more"></button>
+    </section>
+
+    <section class="about-author root__section">
+      <img src="" alt="" class="about-author__photo">
+      <h2 class="about-author__title"></h2>
+      <p class="about-author__paragraph"></p>
+      <p class="about-author__paragraph"></p>
+    </section>
+
+    <footer class="footer root__section">
+      <p class="footer__copyright"></p>
+
+      <nav class="footer__menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item"><a class="footer__menu-link" href="./about.html">Главная</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="./paper.html">О проекте</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="./paper.html">Яндекс.Практикум</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social-icons">
+        <img src="" alt="" class="footer__social-icon">
+        <img src="" alt="" class="footer__social-icon">
+      </div>
     </footer>
 
   </div>
