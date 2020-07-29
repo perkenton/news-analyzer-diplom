@@ -1,0 +1,10 @@
+.header__wrap {
+  width: calc(100% - 105px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}

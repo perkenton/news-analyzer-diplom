@@ -13,23 +13,28 @@
 
   <div class="root">
     
-    <header class="header">
-      <p class="logo logo_white">NewsAnalyzer</p>
-
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item"><a class="header__menu-link header__menu-link_active" href="./">Главная</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="./about.html">О проекте</a></li>
-        </ul>
-      </nav>
-    
-    </header>
-
     <section class="search">
+
+      <header class="header">
+        <div class="header__wrap">
+          <p class="logo logo_white">NewsAnalyzer</p>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a class="header__menu-link header__menu-link_active" href="./">Главная</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="./about.html">О проекте</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
       <h1 class="search__title">Что в мире творится?</h1>
       <p class="search__descripton">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
-      <input type="text" class="search__input">
-      <button class="search__button">Искать</button>
+      <form action="" class="search__form">
+        <input type="search" autofocus placeholder="Введите тему новости" class="search__input">
+        <input type="submit" value="Искать" class="search__button">
+        <!-- <button class="search__button">Искать</button> -->
+      </form>
+
     </section>
 
     <section class="preloader root__section">
