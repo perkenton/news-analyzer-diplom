@@ -1,0 +1,8 @@
+.line {
+  left: calc(50% - 1px);
+  width: 1px;
+  height: 100px;
+  background-color: #000;
+  position: fixed;
+  top: 50px;
+}

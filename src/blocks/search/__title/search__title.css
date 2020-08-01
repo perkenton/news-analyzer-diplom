@@ -1,8 +1,8 @@
 .search__title {
   max-width: 550px;
-  font-family: Roboto Slab, serif;
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 60px;
   line-height: 64px;
   color: #fff;

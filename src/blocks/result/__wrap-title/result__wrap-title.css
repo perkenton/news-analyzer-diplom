@@ -1,0 +1,9 @@
+.result__wrap-title {
+  width: calc(100% - 105px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: auto;
+}

@@ -1,3 +1,6 @@
 .card__image {
-
+  height: 272px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

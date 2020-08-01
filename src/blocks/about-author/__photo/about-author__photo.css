@@ -1,3 +1,8 @@
 .about-author__photo {
-
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
 }

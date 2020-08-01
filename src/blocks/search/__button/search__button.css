@@ -1,10 +1,8 @@
 .search__button {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: -172px;
+  margin-left: -171px;
   margin-right: auto;
-  /*display: flex;*/
-  /*width: 168px;*/
   height: 64px;
   box-sizing: border-box;
   border-radius: 50px;
@@ -13,14 +11,24 @@
   padding: 0 54px;
   cursor: pointer;
   border: none;
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 60px;
+  transition: .2s linear;
 }
 
 .search__button:focus {
   outline: none;
   border-style: none;
+  background-color: #347EFF;
+}
+
+.search__button:hover {
+  background-color: #347EFF;
+}
+
+.search__button:active {
+  background-color: #2A65CC;
 }

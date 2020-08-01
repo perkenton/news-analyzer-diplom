@@ -1,3 +1,32 @@
 .result__analitic-link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1A1B22;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: .2s linear;
+}
 
+.result__analitic-link::after {
+  content: "\276F";
+  position: absolute;
+  top: 2px;
+  left: 206px;
+  transition: .2s linear;
+}
+
+.result__analitic-link:hover {
+  color: #777A91;
+}
+
+.result__analitic-link:hover::after {
+  color: #777A91;
+  left: 210px;
 }

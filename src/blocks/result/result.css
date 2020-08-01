@@ -1,3 +1,13 @@
-.result {
+@import url(./__analitic-link/result__analitic-link.css);
+@import url(./__button-more/result__button-more.css);
+@import url(./__cards-list/result__cards-list.css);
+@import url(./__title/result__title.css);
+@import url(./__wrap-title/result__wrap-title.css);
 
+.result {
+  background-color: #F5F6F7;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  border-top: 1px solid #000;
 }

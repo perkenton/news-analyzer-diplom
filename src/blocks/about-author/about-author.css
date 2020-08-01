@@ -1,3 +1,14 @@
-.about-author {
+@import url(./__paragraph/about-author__paragraph.css);
+@import url(./__photo/about-author__photo.css);
+@import url(./__text-wrap/about-author__text-wrap.css);
+@import url(./__title/about-author__title.css);
 
+.about-author {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
