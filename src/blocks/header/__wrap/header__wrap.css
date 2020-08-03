@@ -10,3 +10,10 @@
   padding-right: 40px;
   padding-left: 40px;
 }
+
+@media (max-width: 460px) {
+  .header__wrap {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}

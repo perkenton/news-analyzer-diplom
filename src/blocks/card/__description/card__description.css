@@ -35,3 +35,9 @@
     -webkit-line-clamp: 4;
   }
 }
+
+@media (max-width: 850px) {
+  .card__description {
+    margin-bottom: 5px;
+  }
+}

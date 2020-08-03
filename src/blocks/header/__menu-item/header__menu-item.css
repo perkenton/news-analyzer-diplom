@@ -6,3 +6,9 @@
 .header__menu-item:last-child {
   margin-right: 0;
 }
+
+@media (max-width: 460px) {
+  .header__menu-item {
+    margin-right: 11px;
+  }
+}

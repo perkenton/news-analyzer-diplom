@@ -21,3 +21,9 @@
     padding-bottom: 16px;
   }
 }
+
+@media (max-width: 540px) {
+  .card__source-name {
+    padding-bottom: 20px;
+  }
+}

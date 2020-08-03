@@ -24,7 +24,6 @@
     margin-bottom: 10px;
     padding-left: 16px;
     padding-right: 16px;
-    display: -webkit-box;
     -webkit-line-clamp: 2;
   }
 }
@@ -36,7 +35,14 @@
     margin-bottom: 10px;
     padding-left: 16px;
     padding-right: 16px;
-    display: -webkit-box;
     -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 540px) {
+  .card__title {
+    margin-top: 16px;
+    line-height: 26px;
+    -webkit-line-clamp: 2;
   }
 }

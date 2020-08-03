@@ -14,6 +14,12 @@
     font-size: 30px;
     line-height: 40px;
     margin-top: 0;
+    margin-bottom: 9px;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-author__title {
     margin-bottom: 16px;
   }
 }

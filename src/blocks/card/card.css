@@ -10,7 +10,7 @@
   text-decoration: none;
   background-color: #fff;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 16px;
   box-sizing: border-box;
   display: block;
   transition: .2s linear;
@@ -36,5 +36,12 @@
   .card {
     max-width: 224px;
     height: 420px;
+  }
+}
+
+@media (max-width: 540px) {
+  .card {
+    max-width: 288px;
+    height: 446px;
   }
 }

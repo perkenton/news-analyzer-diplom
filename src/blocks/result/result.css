@@ -16,3 +16,10 @@
     padding-bottom: 40px;
   }
 }
+
+@media (max-width: 540px) {
+  .result {
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+}

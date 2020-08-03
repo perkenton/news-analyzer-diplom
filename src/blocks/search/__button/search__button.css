@@ -41,3 +41,12 @@
     line-height: 0;
   }
 }
+
+@media (max-width: 460px) {
+  .search__button {
+    display: block;
+    height: 56px;
+    margin: auto;
+    padding: 0 114px;
+  }
+}

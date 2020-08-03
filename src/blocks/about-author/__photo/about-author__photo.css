@@ -12,3 +12,10 @@
     max-width: 232px;
   }
 }
+
+@media (max-width: 540px) {
+  .about-author__photo {
+    max-width: 272px;
+    margin-bottom: 24px;
+  }
+}

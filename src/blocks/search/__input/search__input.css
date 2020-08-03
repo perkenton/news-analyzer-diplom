@@ -50,3 +50,11 @@
     height: 56px;
   }
 }
+
+@media (max-width: 460px) {
+  .search__input {
+    width: 288px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+}

@@ -20,3 +20,12 @@
     margin-bottom: 24px;
   }
 }
+
+@media (max-width: 460px) {
+  .search__descripton {
+    max-width: 288px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 64px;
+  }
+}

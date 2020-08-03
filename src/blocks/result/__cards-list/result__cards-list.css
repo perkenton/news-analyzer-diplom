@@ -21,8 +21,18 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 699px) {
   .result__cards-list {
-    
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .result__cards-list {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 36px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

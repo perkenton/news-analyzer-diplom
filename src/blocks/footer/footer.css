@@ -26,3 +26,29 @@
     min-height: 64px;
   }
 }
+
+@media (max-width: 730px) {
+  .footer {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 405px) {
+  .footer {
+    align-content: center;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    min-height: 180px;
+    align-content: inherit;
+  }
+}

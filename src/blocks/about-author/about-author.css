@@ -21,6 +21,16 @@
   .about-author {
     padding-top: 40px;
     padding-bottom: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-author {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
     padding-right: 16px;
   }
 }

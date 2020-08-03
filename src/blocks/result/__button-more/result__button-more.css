@@ -34,3 +34,9 @@
     padding: 22px 60px;
   }
 }
+
+@media (max-width: 540px) {
+  .result__button-more {
+    padding: 18px 84px;
+  }
+}

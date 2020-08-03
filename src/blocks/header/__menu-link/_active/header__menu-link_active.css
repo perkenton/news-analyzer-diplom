@@ -9,3 +9,9 @@
     padding-bottom: 18px;
   }
 }
+
+@media (max-width: 460px) {
+  .header__menu-link_active {
+    padding-bottom: 14px;
+  }
+}

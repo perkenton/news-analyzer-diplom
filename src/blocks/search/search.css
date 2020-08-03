@@ -16,3 +16,9 @@
     min-height: 400px;
   }
 }
+
+@media (max-width: 460px) {
+  .search {
+    min-height: 536px;
+  }
+}
