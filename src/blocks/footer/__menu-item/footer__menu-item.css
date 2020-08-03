@@ -2,3 +2,13 @@
   display: inline;
   margin-right: 40px;
 }
+
+.footer__menu-item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .footer__menu-item {
+    margin-right: 25px;
+  }
+}

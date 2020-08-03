@@ -17,7 +17,7 @@
 
       <header class="header">
         <div class="header__wrap">
-          <p class="logo logo_white">NewsAnalyzer</p>
+          <a href="./" class="header__logo header__logo_white">NewsAnalyzer</a>
           <nav class="header__menu">
             <ul class="header__menu-list">
               <li class="header__menu-item"><a class="header__menu-link header__menu-link_active" href="./">Главная</a></li>
@@ -32,21 +32,20 @@
       <form action="" class="search__form">
         <input type="search" placeholder="Введите тему новости" class="search__input">
         <input type="submit" value="Искать" class="search__button">
-        <!-- <button class="search__button">Искать</button> -->
       </form>
 
     </section>
 
-    <section class="preloader">
+<!--     <section class="preloader">
       <i class="preloader__circle"></i>
       <p class="preloader__caption">Идет поиск новостей...</p>
     </section>
 
     <section class="not-found">
-      <img src="<%=require('./images/not-found_v1.svg')%>" alt="" class="not-found__sad-image">
+      <img src="<%=require('./images/not-found_v1.svg')%>" alt="Грустный смайлик" class="not-found__sad-image">
       <h2 class="not-found__title">Ничего не&nbsp;найдено</h2>
       <p class="not-found__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
-    </section>
+    </section> -->
     
     <!-- <div class="line"></div> УДАЛИТЬ! -->
 
@@ -58,7 +57,7 @@
       
       <div class="result__cards-list">
         <a href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/" class="card" target="_blank">
-          <div class="card__image" style="background-image: url(./images/image_08.jpg);"></div>
+          <div class="card__image" style="background-image: url(<%=require('./images/image_08.jpg')%>);"></div>
           <p class="card__published-at">9 августа, 2019</p>
           <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
           <p class="card__description">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня каждый может приобщиться к&nbsp;природе.</p>
@@ -66,7 +65,7 @@
         </a>
 
         <a href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii/" class="card" target="_blank">
-          <div class="card__image" style="background-image: url(./images/image_04.jpg);"></div>
+          <div class="card__image" style="background-image: url(<%=require('./images/image_04.jpg')%>);"></div>
           <p class="card__published-at">9 августа, 2019</p>
           <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
           <p class="card__description">Фотограф отвлеклась от&nbsp;освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из&nbsp;местных чудес природы.</p>
@@ -74,11 +73,35 @@
         </a>
 
         <a href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/" class="card" target="_blank">
-          <div class="card__image" style="background-image: url(./images/image_07.png);"></div>
+          <div class="card__image" style="background-image: url(<%=require('./images/image_07.png')%>);"></div>
           <p class="card__published-at">29 июля, 2019</p>
           <h3 class="card__title">&laquo;Первозданная тайга&raquo;: новый фотопроект Игоря Шпиленка</h3>
           <p class="card__description">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о&nbsp;необходимости их&nbsp;сохранения. В&nbsp;этот раз он&nbsp;отправился в&nbsp;Двинско-Пинежскую тайгу, где...</p>
           <p class="card__source-name">Риа</p>
+        </a>
+
+        <a href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/" class="card" target="_blank">
+          <div class="card__image" style="background-image: url(<%=require('./images/image_06.jpg')%>);"></div>
+          <p class="card__published-at">9 августа, 2019</p>
+          <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
+          <p class="card__description">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня каждый может приобщиться к&nbsp;природе.</p>
+          <p class="card__source-name">Дзен</p>
+        </a>
+
+        <a href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii/" class="card" target="_blank">
+          <div class="card__image" style="background-image: url(<%=require('./images/image_01.jpg')%>);"></div>
+          <p class="card__published-at">9 августа, 2019</p>
+          <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+          <p class="card__description">Фотограф отвлеклась от&nbsp;освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из&nbsp;местных чудес природы.</p>
+          <p class="card__source-name">Афиша</p>
+        </a>
+
+        <a href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka/" class="card" target="_blank">
+          <div class="card__image" style="background-image: url(<%=require('./images/image_05.jpg')%>);"></div>
+          <p class="card__published-at">29 июля, 2019</p>
+          <h3 class="card__title">&laquo;Первозданная тайга&raquo;: новый фотопроект Игоря Шпиленка</h3>
+          <p class="card__description">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о&nbsp;необходимости их&nbsp;сохранения. В&nbsp;этот раз он&nbsp;отправился в&nbsp;Двинско-Пинежскую тайгу, где...</p>
+          <p class="card__source-name">Медиазона</p>
         </a>
       </div>
 
@@ -99,7 +122,7 @@
       </div>
     </section>
 
-    <footer class="footer root__section">
+    <footer class="footer">
       <p class="footer__copyright">&copy;&nbsp;2020 Superpupersite</p>
 
       <nav class="footer__menu">
@@ -112,10 +135,10 @@
 
       <div class="footer__social-icons">
         <a href="https://github.com/perkenton" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/github-icon.svg')%>" alt="" class="footer__social-icon">
+          <img src="<%=require('./images/github-icon.svg')%>" alt="Логотип гитхаба" class="footer__social-icon">
         </a>
         <a href="https://www.facebook.com" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/fb-icon.svg')%>" alt="" class="footer__social-icon">
+          <img src="<%=require('./images/fb-icon.svg')%>" alt="Логотип фейсбука" class="footer__social-icon">
         </a>
       </div>
     </footer>

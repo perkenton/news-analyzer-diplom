@@ -1,4 +1,18 @@
 .about-author__text-wrap {
   max-width: 600px;
-  margin-left: 56px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1180px) {
+  .about-author__text-wrap {
+    max-width: 600px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .about-author__text-wrap {
+    max-width: 424px;
+    margin-top: 0;
+  }
 }

@@ -1,5 +1,5 @@
 .search__descripton {
-  max-width: 550px;
+  max-width: 610px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -7,7 +7,16 @@
   line-height: 24px;
   color: #fff;
   margin-top: 0;
-  margin-bottom: 64px;
+  margin-bottom: 63px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .search__descripton {
+    max-width: 452px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
 }

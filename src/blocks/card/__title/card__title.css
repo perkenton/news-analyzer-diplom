@@ -16,3 +16,27 @@
   overflow-y: hidden;
   word-wrap: break-word;
 }
+
+@media (max-width: 1024px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 850px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+  }
+}

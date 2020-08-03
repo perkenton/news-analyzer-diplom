@@ -4,3 +4,9 @@
   background-position: center center;
   background-size: cover;
 }
+
+@media (max-width: 850px) {
+  .card__image {
+    height: 150px;
+  }
+}

@@ -1,5 +1,5 @@
 .search__title {
-  max-width: 550px;
+  max-width: 610px;
   font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: 400;
@@ -10,4 +10,14 @@
   margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .search__title {
+    max-width: 452px;
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
 }

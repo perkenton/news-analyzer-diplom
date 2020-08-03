@@ -10,3 +10,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 768px) {
+  .search {
+    min-height: 400px;
+  }
+}

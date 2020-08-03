@@ -32,3 +32,12 @@
 .search__button:active {
   background-color: #2A65CC;
 }
+
+@media (max-width: 768px) {
+  .search__button {
+    height: 56px;
+    padding: 0 50px;
+    margin-left: -163px;
+    line-height: 0;
+  }
+}

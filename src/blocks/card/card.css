@@ -6,7 +6,7 @@
 
 .card {
   max-width: 400px;
-  max-height: 576px;
+  height: 576px;
   text-decoration: none;
   background-color: #fff;
   overflow: hidden;
@@ -17,11 +17,6 @@
   margin: auto;
 }
 
-.card:focus {
-  outline: none;
-  border-style: none;
-}
-
 .card:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -29,4 +24,17 @@
 .card:active {
   background-color: #fefefe;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card:focus {
+  outline: 1px solid rgba(47, 113, 229, .7);
+  outline-offset: 1px;
+  box-shadow: 0px 0px 2px 0px rgba(47, 113, 229, .7);
+}
+
+@media (max-width: 850px) {
+  .card {
+    max-width: 224px;
+    height: 420px;
+  }
 }
