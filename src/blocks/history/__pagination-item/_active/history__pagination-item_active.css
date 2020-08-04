@@ -1,0 +1,8 @@
+.history__pagination-item_active {
+  background-color: #1A1B22;
+  cursor: default;
+}
+
+.history__pagination-item_active:hover {
+  transform: none;
+}

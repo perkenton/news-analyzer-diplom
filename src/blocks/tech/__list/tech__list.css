@@ -1,0 +1,7 @@
+.tech__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 11px;
+  margin-left: 178px;
+}

@@ -1,0 +1,10 @@
+.history__card-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 16px;
+  float: left;
+}

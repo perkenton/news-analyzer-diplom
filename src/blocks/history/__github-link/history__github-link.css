@@ -1,0 +1,39 @@
+.history__github-link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1A1B22;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-right: 19px;
+  transition: .2s linear;
+}
+
+.history__github-link::after {
+  content: "\276F";
+  position: absolute;
+  top: 1px;
+  left: 156px;
+  transition: .2s linear;
+}
+
+.history__github-link:hover {
+  color: #777A91;
+}
+
+.history__github-link:hover::after {
+  color: #777A91;
+  left: 160px;
+}
+
+.history__github-link:focus {
+  outline: 1px dotted rgba(47, 113, 229, .7);
+  outline-offset: 1px;
+  box-shadow: 0px 0px 2px 0px rgba(47, 113, 229, .7);
+}

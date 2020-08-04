@@ -1,0 +1,10 @@
+.tech__wrap {
+  max-width: 1152px;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}

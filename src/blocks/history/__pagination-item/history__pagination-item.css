@@ -1,0 +1,18 @@
+.history__pagination-item {
+  background-color: #D1D2D6;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.history__pagination-item:last-child {
+  margin-right: 0;
+}
+
+.history__pagination-item:hover {
+  transform: scale(1.5);
+}

@@ -1,0 +1,12 @@
+@import url(./__description/tech__description.css);
+@import url(./__item/tech__item.css);
+@import url(./__image/tech__image.css);
+@import url(./__list/tech__list.css);
+@import url(./__title/tech__title.css);
+@import url(./__wrap/tech__wrap.css);
+
+.tech {
+  padding-top: 80px;
+  padding-bottom: 88px;
+  background-color: #F5F6F7;
+}

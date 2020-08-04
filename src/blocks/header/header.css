@@ -1,17 +1,22 @@
 @import url(./__logo/header__logo.css);
 @import url(./__logo/_white/header__logo_white.css);
+@import url(./__logo/_black/header__logo_black.css);
 @import url(./__menu/header__menu.css);
 @import url(./__menu-item/header__menu-item.css);
 @import url(./__menu-link/header__menu-link.css);
 @import url(./__menu-link/_active/header__menu-link_active.css);
+@import url(./__menu-link/_active_white/header__menu-link_active_white.css);
+@import url(./__menu-link/_active_black/header__menu-link_active_black.css);
+@import url(./__menu-link/_hover-black/header__menu-link_hover-black.css);
+@import url(./__menu-link/_hover-white/header__menu-link_hover-white.css);
 @import url(./__menu-list/header__menu-list.css);
 @import url(./__wrap/header__wrap.css);
+@import url(./_background-white/header_background-white.css);
+@import url(./_background-color/header_background-color.css);
 
 .header {
   width: 100%;
   height: 80px;
-  background: rgba(196, 196, 196, 0.01);
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,11 @@
+@import url(./__title/clients__title.css);
+@import url(./__paragraph/clients__paragraph.css);
+
+.clients {
+  max-width: 1152px;
+  padding-top: 80px;
+  padding-bottom: 94px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
+}

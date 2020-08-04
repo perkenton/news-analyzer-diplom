@@ -1,0 +1,22 @@
+.history__cards-list {
+  max-width: 1440px;
+  min-height: 300px;
+  padding-left: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: auto;
+}
+
+.history__cards-list::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(245,246,247,1) 100%);
+}

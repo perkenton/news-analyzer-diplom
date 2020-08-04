@@ -1,0 +1,22 @@
+@import url(./__card/history__card.css);
+@import url(./__card-arrow-left/history__card-arrow-left.css);
+@import url(./__card-arrow-right/history__card-arrow-right.css);
+@import url(./__card-comment/history__card-comment.css);
+@import url(./__card-date/history__card-date.css);
+@import url(./__card-mail/history__card-mail.css);
+@import url(./__card-name/history__card-name.css);
+@import url(./__card-photo/history__card-photo.css);
+@import url(./__card-user-info/history__card-user-info.css);
+@import url(./__cards-list/history__cards-list.css);
+@import url(./__github-link/history__github-link.css);
+@import url(./__pagination/history__pagination.css);
+@import url(./__pagination-item/history__pagination-item.css);
+@import url(./__pagination-item/_active/history__pagination-item_active.css);
+@import url(./__title/history__title.css);
+@import url(./__wrap-title/history__wrap-title.css);
+
+.history {
+  background-color: #F5F6F7;
+  padding-top: 72px;
+  padding-bottom: 80px;
+}

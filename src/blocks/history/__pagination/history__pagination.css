@@ -1,0 +1,10 @@
+.history__pagination {
+  list-style: none;
+  width: 40px;
+  padding: 0;
+  margin-top: 48px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}

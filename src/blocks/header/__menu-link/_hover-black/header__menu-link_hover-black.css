@@ -1,0 +1,7 @@
+.header__menu-link_hover-black {
+  transition: .2s linear;
+}
+
+.header__menu-link_hover-black:hover {
+  color: #000;
+}

@@ -1,0 +1,7 @@
+.header__menu-link_hover-white {
+  transition: .2s linear;
+}
+
+.header__menu-link_hover-white:hover {
+  color: #fff;
+}

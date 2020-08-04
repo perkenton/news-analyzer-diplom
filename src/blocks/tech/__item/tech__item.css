@@ -1,0 +1,10 @@
+.tech__item {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 41px;
+}
+
+.tech__item:last-child {
+  margin-right: 0;
+}
