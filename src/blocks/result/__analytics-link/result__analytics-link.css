@@ -1,4 +1,4 @@
-.result__analitic-link {
+.result__analytics-link {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -15,7 +15,7 @@
   transition: .2s linear;
 }
 
-.result__analitic-link::after {
+.result__analytics-link::after {
   content: "\276F";
   position: absolute;
   top: 2px;
@@ -23,17 +23,17 @@
   transition: .2s linear;
 }
 
-.result__analitic-link:hover {
+.result__analytics-link:hover {
   color: #777A91;
 }
 
-.result__analitic-link:hover::after {
+.result__analytics-link:hover::after {
   color: #777A91;
   left: 210px;
 }
 
-.result__analitic-link:focus {
-  outline: 1px solid rgba(47, 113, 229, .7);
+.result__analytics-link:focus {
+  outline: 1px dotted rgba(47, 113, 229, .7);
   outline-offset: 1px;
   box-shadow: 0px 0px 2px 0px rgba(47, 113, 229, .7);
 }

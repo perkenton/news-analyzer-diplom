@@ -9,7 +9,7 @@
 }
 
 .header__logo:focus {
-  outline: 1px solid rgba(47, 113, 229, .7);
+  outline: 1px dotted rgba(47, 113, 229, .7);
   outline-offset: 1px;
   box-shadow: 0px 0px 2px 0px rgba(47, 113, 229, .7);
 }
