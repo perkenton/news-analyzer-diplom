@@ -1,0 +1,26 @@
+@import url(./__paragraph/request-data__paragraph.css);
+@import url(./__paragraph/_bold-text/request-data__paragraph_bold-text.css);
+@import url(./__title/request-data__title.css);
+
+.request-data {
+  max-width: 1152px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .request-data {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .request-data {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+@import url(./__link/breadcrumbs__link.css);
+@import url(./__current-location/breadcrumbs__current-location.css);
+
+.breadcrumbs {
+  max-width: 1152px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 460px) {
+  .breadcrumbs {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .breadcrumbs {
+    display: none;
+  }
+}

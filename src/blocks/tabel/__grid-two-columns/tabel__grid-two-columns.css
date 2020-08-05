@@ -1,0 +1,16 @@
+.tabel__grid-two-columns {
+  display: grid;
+  grid-template-columns: 104px auto;
+  height: 80px;
+}
+
+.tabel__grid-two-columns:nth-child(9) {
+  height: 24px;
+}
+
+@media (max-width: 320px) {
+  .tabel__grid-two-columns {
+    grid-template-columns: 80px auto;
+    height: 48px;
+  }
+}

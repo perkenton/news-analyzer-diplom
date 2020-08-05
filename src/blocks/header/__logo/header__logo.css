@@ -6,6 +6,11 @@
   line-height: 24px;
   text-decoration: none;
   margin: 0;
+  transition: .2s linear;
+}
+
+.header__logo:hover {
+  color: #777A91;
 }
 
 .header__logo:focus {

@@ -1,0 +1,13 @@
+.tabel__strip {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  background-color: #2F71E5;
+  padding: 5px 0 5px 6px;
+  margin-bottom: 56px;
+}

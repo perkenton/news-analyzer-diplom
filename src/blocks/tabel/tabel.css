@@ -1,0 +1,33 @@
+@import url(./__chart-item/tabel__chart-item.css);
+@import url(./__chart-items/tabel__chart-items.css);
+@import url(./__date/tabel__date.css);
+@import url(./__date-heading/tabel__date-heading.css);
+@import url(./__date-string/tabel__date-string.css);
+@import url(./__grid-chart-items/tabel__grid-chart-items.css);
+@import url(./__grid-heading/tabel__grid-heading.css);
+@import url(./__grid-two-columns/tabel__grid-two-columns.css);
+@import url(./__line-chart/tabel__line-chart.css);
+@import url(./__quantity-heading/tabel__quantity-heading.css);
+@import url(./__strip/tabel__strip.css);
+@import url(./__title/tabel__title.css);
+@import url(./__wrap/tabel__wrap.css);
+
+.tabel {
+  background-color: #F5F6F7;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .tabel {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .tabel {
+    padding-top: 24px;
+    padding-bottom: 38px;
+  }
+}
