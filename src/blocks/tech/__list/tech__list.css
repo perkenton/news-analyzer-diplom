@@ -5,3 +5,34 @@
   margin-top: 11px;
   margin-left: 178px;
 }
+
+@media (max-width: 1207px) {
+  .tech__list {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech__list {
+    margin: auto;
+  }
+}
+
+@media (max-width: 675px) {
+  .tech__list {
+    max-width: 485px;
+  }
+}
+
+@media (max-width: 560px) {
+  .tech__list {
+    max-width: 322px;
+  }
+}
+
+@media (max-width: 354px) {
+  .tech__list {
+    max-width: 272px;
+  }
+}

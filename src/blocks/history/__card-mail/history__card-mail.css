@@ -12,3 +12,9 @@
   overflow-y: hidden;
   word-wrap: break-word;
 }
+
+@media (max-width: 768px) {
+  .history__card-mail {
+    -webkit-line-clamp: 1;
+  }
+}

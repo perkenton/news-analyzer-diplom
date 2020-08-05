@@ -8,3 +8,9 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
+
+@media (max-width: 365px) {
+  .history__card-date {
+    margin-bottom: 8px;
+  }
+}

@@ -16,8 +16,20 @@
   }
 }
 
-@media (max-width: 595px) {
+@media (max-width: 710px) {
+  .history__title {
+    max-width: 336px;
+  }
+}
+
+@media (max-width: 692px) {
   .history__title {
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .history__title {
+    margin-bottom: 0;
   }
 }

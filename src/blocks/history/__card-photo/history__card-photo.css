@@ -8,3 +8,11 @@
   margin-right: 16px;
   float: left;
 }
+
+@media (max-width: 768px) {
+  .history__card-photo {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+}

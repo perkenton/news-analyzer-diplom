@@ -8,3 +8,15 @@
 .tech__item:last-child {
   margin-right: 0;
 }
+
+@media (max-width: 560px) {
+  .tech__item:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 354px) {
+  .tech__item {
+    margin-right: 32px;
+  }
+}

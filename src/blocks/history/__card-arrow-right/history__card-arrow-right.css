@@ -16,3 +16,9 @@
 .history__card-arrow-right:hover {
   transform: scale(1.2);
 }
+
+@media (max-width: 768px) {
+  .history__card-arrow-right {
+    display: none;
+  }
+}

@@ -13,3 +13,9 @@
   overflow-y: hidden;
   word-wrap: break-word;
 }
+
+@media (max-width: 365px) {
+  .history__card-comment {
+    -webkit-line-clamp: 5;
+  }
+}

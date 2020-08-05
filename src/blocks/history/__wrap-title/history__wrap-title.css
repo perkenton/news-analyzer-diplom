@@ -11,9 +11,21 @@
   padding-bottom: 58px;
 }
 
+@media (max-width: 768px) {
+  .history__wrap-title {
+    padding-bottom: 32px;
+  }
+}
+
 @media (max-width: 460px) {
   .history__wrap-title {
     padding-right: 16px;
     padding-left: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .history__wrap-title {
+    padding-bottom: 16px;
   }
 }

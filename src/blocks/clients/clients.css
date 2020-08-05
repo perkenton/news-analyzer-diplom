@@ -9,3 +9,19 @@
   padding-right: 40px;
   margin: auto;
 }
+
+@media (max-width: 768px) {
+  .clients {
+    padding-top: 30px;
+    padding-bottom: 26px;
+  }
+}
+
+@media (max-width: 460px) {
+  .clients {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

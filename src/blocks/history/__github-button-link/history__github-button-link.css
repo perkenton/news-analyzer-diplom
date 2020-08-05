@@ -1,0 +1,32 @@
+.history__github-button-link {
+  display: none;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  text-align: center;
+  text-decoration: none;
+  max-width: 288px;
+  margin-top: 24px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0;
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: 1px solid #1A1B22;
+}
+
+.history__github-button-link:focus {
+  outline: 1px dotted rgba(47, 113, 229, .7);
+  outline-offset: 1px;
+  box-shadow: 0px 0px 2px 0px rgba(47, 113, 229, .7);
+}
+
+@media (max-width: 320px) {
+  .history__github-button-link {
+    display: block;
+  }
+}

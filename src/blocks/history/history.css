@@ -8,6 +8,7 @@
 @import url(./__card-photo/history__card-photo.css);
 @import url(./__card-user-info/history__card-user-info.css);
 @import url(./__cards-list/history__cards-list.css);
+@import url(./__github-button-link/history__github-button-link.css);
 @import url(./__github-link/history__github-link.css);
 @import url(./__pagination/history__pagination.css);
 @import url(./__pagination-item/history__pagination-item.css);
@@ -19,4 +20,18 @@
   background-color: #F5F6F7;
   padding-top: 72px;
   padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .history {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .history {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
