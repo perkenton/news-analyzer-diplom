@@ -17,10 +17,10 @@
 
       <header class="header header_background-color">
         <div class="header__wrap">
-          <a href="./" class="header__logo header__logo_white">NewsAnalyzer</a>
+          <a href="./index.html" class="header__logo header__logo_white">NewsAnalyzer</a>
           <nav class="header__menu">
             <ul class="header__menu-list">
-              <li class="header__menu-item"><a class="header__menu-link header__menu-link_active header__menu-link_active_white" href="./">Главная</a></li>
+              <li class="header__menu-item"><a class="header__menu-link header__menu-link_active header__menu-link_active_white" href="./index.html">Главная</a></li>
               <li class="header__menu-item"><a class="header__menu-link header__menu-link_hover-white" href="./about.html">О проекте</a></li>
             </ul>
           </nav>
@@ -30,7 +30,12 @@
       <h1 class="search__title">Что в мире творится?</h1>
       <p class="search__descripton">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
       <form action="" class="search__form">
-        <input type="search" placeholder="Введите тему новости" class="search__input">
+        <input 
+          type="search" 
+          placeholder="Введите тему новости" 
+          class="search__input"  
+          pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" 
+          required>
         <input type="submit" value="Искать" class="search__button">
       </form>
 
@@ -125,7 +130,7 @@
 
       <nav class="footer__menu">
         <ul class="footer__menu-list">
-          <li class="footer__menu-item"><a class="footer__menu-link" href="./">Главная</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="./index.html">Главная</a></li>
           <li class="footer__menu-item"><a class="footer__menu-link" href="./about.html">О проекте</a></li>
           <li class="footer__menu-item"><a class="footer__menu-link" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
         </ul>
