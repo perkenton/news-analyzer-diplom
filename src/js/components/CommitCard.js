@@ -9,7 +9,7 @@ export default class CommitCard {
     this.commiterMessage = objCommitCard.commiterMessage;
   }
 
-  _template = () => {
+  #template = () => {
     const markup = `
       <div class="history__card">
         <p class="history__card-date"></p>
@@ -28,7 +28,7 @@ export default class CommitCard {
   }
 
   create = () => {
-    this.commitCard = this._template();
+    this.commitCard = this.#template();
 
     this.commitCard.querySelector('.history__card-date').textContent = this.commitDate;
     this.commitCard.querySelector('.history__card-photo').setAttribute('src', `${this.commiterAvatarUrl}`);

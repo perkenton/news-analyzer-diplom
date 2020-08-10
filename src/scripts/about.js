@@ -5,8 +5,8 @@ import '../pages/about.css';
 import CommitCard from '../js/components/CommitCard.js';
 import CommitCardList from '../js/components/CommitCardList.js';
 import {
-  TEST_DATA,
   COMMIT_CARDS_CONTAINER,
+  TEST_DATA,
 } from '../js/constants/constants.js';
 
 

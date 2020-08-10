@@ -1,7 +1,9 @@
 export { 
-  TEST_DATA,
   COMMIT_CARDS_CONTAINER,
+  TEST_DATA,
 };
+
+const COMMIT_CARDS_CONTAINER = document.querySelector('.history__cards-list');
 
 const TEST_DATA = [
   {
@@ -212,8 +214,6 @@ const TEST_DATA = [
       ]
   },
 ];
-
-const COMMIT_CARDS_CONTAINER = document.querySelector('.history__cards-list');
 
 
 
