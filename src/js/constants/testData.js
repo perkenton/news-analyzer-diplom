@@ -1,11 +1,4 @@
-'use strict';
-
-import '../pages/about.css';
-
-import CommitCard from '../js/components/CommitCard.js';
-import CommitCardList from '../js/components/CommitCardList.js';
-
-const testData = [
+export const testData = [
   {
       "sha": "ad5cee9a432723918faabcd38b301c5947595ba7",
       "node_id": "MDY6Q29tbWl0MjgxNzUxMDQ0OmFkNWNlZTlhNDMyNzIzOTE4ZmFhYmNkMzhiMzAxYzU5NDc1OTViYTc=",
@@ -41,7 +34,7 @@ const testData = [
           "login": "perkenton",
           "id": 42587922,
           "node_id": "MDQ6VXNlcjQyNTg3OTIy",
-          "avatar_url": "../../images/user-01.jpg",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
           "gravatar_id": "",
           "url": "https://api.github.com/users/perkenton",
           "html_url": "https://github.com/perkenton",
@@ -61,7 +54,7 @@ const testData = [
           "login": "web-flow",
           "id": 19864447,
           "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-          "avatar_url": "../../images/user-01.jpg",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
           "gravatar_id": "",
           "url": "https://api.github.com/users/web-flow",
           "html_url": "https://github.com/web-flow",
@@ -121,7 +114,7 @@ const testData = [
       "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
       "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
       "comments_url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20/comments",
-      "author": { "avatar_url": "../../images/user-01.jpg", },
+      "author": null,
       "committer": null,
       "parents": [
           {
@@ -162,7 +155,7 @@ const testData = [
       "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/32940e164d4e7613240c63373ee14e34a0541b78",
       "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/32940e164d4e7613240c63373ee14e34a0541b78",
       "comments_url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/32940e164d4e7613240c63373ee14e34a0541b78/comments",
-      "author": null, //{ "avatar_url": "../../images/user-01.jpg", },
+      "author": null,
       "committer": null,
       "parents": [
           {
@@ -203,7 +196,7 @@ const testData = [
       "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/82c07683ddaf2ac3a4e23d1fafb808745b7b35c2",
       "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/82c07683ddaf2ac3a4e23d1fafb808745b7b35c2",
       "comments_url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/82c07683ddaf2ac3a4e23d1fafb808745b7b35c2/comments",
-      "author": { "avatar_url": "../../images/user-01.jpg", },
+      "author": null,
       "committer": null,
       "parents": [
           {
@@ -213,14 +206,4 @@ const testData = [
           }
       ]
   },
-];
-
-const commitCardsContainer = document.querySelector('.history__cards-list');
-
-
-const createCommitCard = (commitDate, commiterAvatarUrl, commiterName, commiterMail, commiterMessage) => {
-  return new CommitCard({commitDate, commiterAvatarUrl, commiterName, commiterMail, commiterMessage}).create();
-}
-const commitCardList = new CommitCardList({commitCardsContainer, createCommitCard, testData});
-commitCardList.render();
-
+]
