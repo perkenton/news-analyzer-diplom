@@ -41,12 +41,12 @@
 
     </section>
 
-    <section class="preloader">
+    <section class="preloader" style="display: none;">
       <i class="preloader__circle"></i>
       <h2 class="preloader__caption">Идет поиск новостей...</h2>
     </section>
 
-    <section class="not-found">
+    <section class="not-found" style="display: none;">
       <img src="<%=require('./images/not-found_v1.svg')%>" alt="Грустный смайлик" class="not-found__sad-image">
       <h2 class="not-found__title">Ничего не&nbsp;найдено</h2>
       <p class="not-found__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
@@ -59,7 +59,7 @@
       </div>
       
       <div class="result__cards-list">
-        <a href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/" class="card" target="_blank">
+        <!-- <a href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/" class="card" target="_blank">
           <div class="card__image" style="background-image: url(<%=require('./images/image_08.jpg')%>);"></div>
           <p class="card__published-at">9 августа, 2019</p>
           <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
@@ -105,10 +105,10 @@
           <h3 class="card__title">&laquo;Первозданная тайга&raquo;: новый фотопроект Игоря Шпиленка</h3>
           <p class="card__description">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о&nbsp;необходимости их&nbsp;сохранения. В&nbsp;этот раз он&nbsp;отправился в&nbsp;Двинско-Пинежскую тайгу, где...</p>
           <p class="card__source-name">Медиазона</p>
-        </a>
+        </a> -->
       </div>
 
-      <button class="result__button-more">Показать еще</button>
+      <button class="result__button-more" style="display: none;">Показать еще</button>
     </section> 
 
     <section class="about-author">
