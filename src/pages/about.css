@@ -5,6 +5,7 @@
 @import url(../blocks/history/history.css);
 @import url(../blocks/root/root.css);
 @import url(../blocks/tech/tech.css);
+@import url(../blocks/not-found/not-found.css);
 
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);

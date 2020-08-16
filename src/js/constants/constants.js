@@ -1,13 +1,47 @@
 export { 
   COMMIT_CARDS_CONTAINER,
-  TEST_DATA,
   NEWS_CARDS_CONTAINER,
   TEST_NEWS,
+  GITHUB_API_URL,
+  SWIPER_CONFIG,
+  SWIPER_CONTAINER,
+
 };
 
 const COMMIT_CARDS_CONTAINER = document.querySelector('.history__cards-list');
 
 const NEWS_CARDS_CONTAINER = document.querySelector('.result__cards-list');
+
+const GITHUB_API_URL = 'https://api.github.com/repos/perkenton/news-analyzer-diplom/commits';
+
+const NEWS_API_CONFIG = {
+  url: 'https://praktikum.tk/cohort11/',
+  headers: {
+    authorization: 'de0a6226-ed6a-44a3-a602-c02f5db2fd29',
+    'Content-Type': 'application/json'
+  }
+}
+
+const SWIPER_CONTAINER = '.swiper-container';
+
+const SWIPER_CONFIG = {
+  init: true,
+  slidesPerView: 'auto',
+  setWrapperSize: true,
+  grabCursor: true,
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+}
 
 const TEST_DATA = [
   {
@@ -45,7 +79,7 @@ const TEST_DATA = [
           "login": "perkenton",
           "id": 42587922,
           "node_id": "MDQ6VXNlcjQyNTg3OTIy",
-          "avatar_url": "../../images/user-01.jpg",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
           "gravatar_id": "",
           "url": "https://api.github.com/users/perkenton",
           "html_url": "https://github.com/perkenton",
@@ -65,7 +99,175 @@ const TEST_DATA = [
           "login": "web-flow",
           "id": 19864447,
           "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-          "avatar_url": "../../images/user-01.jpg",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "site_admin": false
+      },
+      "parents": [
+          {
+              "sha": "5478ff6ed91407aa95146bcf02f55e659063c7d4",
+              "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/5478ff6ed91407aa95146bcf02f55e659063c7d4",
+              "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/5478ff6ed91407aa95146bcf02f55e659063c7d4"
+          },
+          {
+              "sha": "3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
+              "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
+              "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20"
+          }
+      ]
+  },
+  {
+      "sha": "ad5cee9a432723918faabcd38b301c5947595ba7",
+      "node_id": "MDY6Q29tbWl0MjgxNzUxMDQ0OmFkNWNlZTlhNDMyNzIzOTE4ZmFhYmNkMzhiMzAxYzU5NDc1OTViYTc=",
+      "commit": {
+          "author": {
+              "name": "perkenton",
+              "email": "42587922+perkenton@users.noreply.github.com",
+              "date": "2020-08-06T17:21:37Z"
+          },
+          "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "date": "2020-08-06T17:21:37Z"
+          },
+          "message": "Merge pull request #1 from perkenton/level-1\n\nLevel 1",
+          "tree": {
+              "sha": "7da449ec2ff9df2d853158c6916a62b5b71f2bdd",
+              "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/git/trees/7da449ec2ff9df2d853158c6916a62b5b71f2bdd"
+          },
+          "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/git/commits/ad5cee9a432723918faabcd38b301c5947595ba7",
+          "comment_count": 0,
+          "verification": {
+              "verified": true,
+              "reason": "valid",
+              "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJfLDwhCRBK7hj4Ov3rIwAAdHIIAICsa6lyhELxFMGXmz1J4e/Z\n5WNFz6UjlBOk8fZYR8QVgnDAVRTlSnfFnjy4uQ8IjWEtGzrglJLEbAbFDK2Yt3tO\nmeNhh7yNJCIJOKJDSxfuFlRS7fngSEobNKN90fLuURue1cowa78AzfiRtACkQXKq\n+QpQcpXG5LaNVGx5wUYN5DHIOl0U9oyK+ZHBHg/YgoCf8vXjIyLHf2LEaynxNIB3\nAYQV3CnJFvcuhnADQhkEIayBer+ncbh0u/vyMJqrb5BJL38rHBs5mcH+1kCEHcjn\nXREYe07jCvBMYk7dMFr5I/h1GSp8xBYRGIm/e0H0XVQMx9AofHKWyPGFigtBrOQ=\n=RSG2\n-----END PGP SIGNATURE-----\n",
+              "payload": "tree 7da449ec2ff9df2d853158c6916a62b5b71f2bdd\nparent 5478ff6ed91407aa95146bcf02f55e659063c7d4\nparent 3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20\nauthor perkenton <42587922+perkenton@users.noreply.github.com> 1596734497 +0300\ncommitter GitHub <noreply@github.com> 1596734497 +0300\n\nMerge pull request #1 from perkenton/level-1\n\nLevel 1"
+          }
+      },
+      "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/ad5cee9a432723918faabcd38b301c5947595ba7",
+      "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/ad5cee9a432723918faabcd38b301c5947595ba7",
+      "comments_url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/ad5cee9a432723918faabcd38b301c5947595ba7/comments",
+      "author": {
+          "login": "perkenton",
+          "id": 42587922,
+          "node_id": "MDQ6VXNlcjQyNTg3OTIy",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/perkenton",
+          "html_url": "https://github.com/perkenton",
+          "followers_url": "https://api.github.com/users/perkenton/followers",
+          "following_url": "https://api.github.com/users/perkenton/following{/other_user}",
+          "gists_url": "https://api.github.com/users/perkenton/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/perkenton/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/perkenton/subscriptions",
+          "organizations_url": "https://api.github.com/users/perkenton/orgs",
+          "repos_url": "https://api.github.com/users/perkenton/repos",
+          "events_url": "https://api.github.com/users/perkenton/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/perkenton/received_events",
+          "type": "User",
+          "site_admin": false
+      },
+      "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "site_admin": false
+      },
+      "parents": [
+          {
+              "sha": "5478ff6ed91407aa95146bcf02f55e659063c7d4",
+              "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/5478ff6ed91407aa95146bcf02f55e659063c7d4",
+              "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/5478ff6ed91407aa95146bcf02f55e659063c7d4"
+          },
+          {
+              "sha": "3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
+              "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
+              "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20"
+          }
+      ]
+  },
+  {
+      "sha": "ad5cee9a432723918faabcd38b301c5947595ba7",
+      "node_id": "MDY6Q29tbWl0MjgxNzUxMDQ0OmFkNWNlZTlhNDMyNzIzOTE4ZmFhYmNkMzhiMzAxYzU5NDc1OTViYTc=",
+      "commit": {
+          "author": {
+              "name": "perkenton",
+              "email": "42587922+perkenton@users.noreply.github.com",
+              "date": "2020-08-06T17:21:37Z"
+          },
+          "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "date": "2020-08-06T17:21:37Z"
+          },
+          "message": "Merge pull request #1 from perkenton/level-1\n\nLevel 1",
+          "tree": {
+              "sha": "7da449ec2ff9df2d853158c6916a62b5b71f2bdd",
+              "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/git/trees/7da449ec2ff9df2d853158c6916a62b5b71f2bdd"
+          },
+          "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/git/commits/ad5cee9a432723918faabcd38b301c5947595ba7",
+          "comment_count": 0,
+          "verification": {
+              "verified": true,
+              "reason": "valid",
+              "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJfLDwhCRBK7hj4Ov3rIwAAdHIIAICsa6lyhELxFMGXmz1J4e/Z\n5WNFz6UjlBOk8fZYR8QVgnDAVRTlSnfFnjy4uQ8IjWEtGzrglJLEbAbFDK2Yt3tO\nmeNhh7yNJCIJOKJDSxfuFlRS7fngSEobNKN90fLuURue1cowa78AzfiRtACkQXKq\n+QpQcpXG5LaNVGx5wUYN5DHIOl0U9oyK+ZHBHg/YgoCf8vXjIyLHf2LEaynxNIB3\nAYQV3CnJFvcuhnADQhkEIayBer+ncbh0u/vyMJqrb5BJL38rHBs5mcH+1kCEHcjn\nXREYe07jCvBMYk7dMFr5I/h1GSp8xBYRGIm/e0H0XVQMx9AofHKWyPGFigtBrOQ=\n=RSG2\n-----END PGP SIGNATURE-----\n",
+              "payload": "tree 7da449ec2ff9df2d853158c6916a62b5b71f2bdd\nparent 5478ff6ed91407aa95146bcf02f55e659063c7d4\nparent 3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20\nauthor perkenton <42587922+perkenton@users.noreply.github.com> 1596734497 +0300\ncommitter GitHub <noreply@github.com> 1596734497 +0300\n\nMerge pull request #1 from perkenton/level-1\n\nLevel 1"
+          }
+      },
+      "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/ad5cee9a432723918faabcd38b301c5947595ba7",
+      "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/ad5cee9a432723918faabcd38b301c5947595ba7",
+      "comments_url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/ad5cee9a432723918faabcd38b301c5947595ba7/comments",
+      "author": {
+          "login": "perkenton",
+          "id": 42587922,
+          "node_id": "MDQ6VXNlcjQyNTg3OTIy",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/perkenton",
+          "html_url": "https://github.com/perkenton",
+          "followers_url": "https://api.github.com/users/perkenton/followers",
+          "following_url": "https://api.github.com/users/perkenton/following{/other_user}",
+          "gists_url": "https://api.github.com/users/perkenton/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/perkenton/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/perkenton/subscriptions",
+          "organizations_url": "https://api.github.com/users/perkenton/orgs",
+          "repos_url": "https://api.github.com/users/perkenton/repos",
+          "events_url": "https://api.github.com/users/perkenton/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/perkenton/received_events",
+          "type": "User",
+          "site_admin": false
+      },
+      "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4",
           "gravatar_id": "",
           "url": "https://api.github.com/users/web-flow",
           "html_url": "https://github.com/web-flow",
@@ -125,7 +327,7 @@ const TEST_DATA = [
       "url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
       "html_url": "https://github.com/perkenton/news-analyzer-diplom/commit/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20",
       "comments_url": "https://api.github.com/repos/perkenton/news-analyzer-diplom/commits/3fc25f15026e6e8cdf2dfc0b23cae6fcee92bf20/comments",
-      "author": { "avatar_url": "../../images/user-01.jpg", },
+      "author": { "avatar_url": "https://avatars3.githubusercontent.com/u/42587922?v=4", },
       "committer": null,
       "parents": [
           {

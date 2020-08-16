@@ -3,7 +3,7 @@
 export default class CommitCardList {
   constructor(objCommitCardList) {
     this.COMMIT_CARDS_CONTAINER = objCommitCardList.COMMIT_CARDS_CONTAINER;
-    this.TEST_DATA = objCommitCardList.TEST_DATA;
+    this.res = objCommitCardList.res;
     this.createCommitCard = objCommitCardList.createCommitCard;
   }
 
@@ -13,9 +13,9 @@ export default class CommitCardList {
   }
 
   render = () => {
-    const alternativeAvatar = '../../images/jacques-yves-cousteau-464.jpg';
+    const alternativeAvatar = 'https://sun9-65.userapi.com/b8gycPnXk-iBxKp8S-LuwTdPX1dEgQbhSNfJag/9bOPuVd-_9k.jpg';
 
-    this.TEST_DATA.forEach(item => {
+    this.res.forEach(item => {
       if (item.author != null) {
         this.addCard(item.commit.committer.date, item.author.avatar_url, item.commit.committer.name, item.commit.committer.email, item.commit.message);
       } else {

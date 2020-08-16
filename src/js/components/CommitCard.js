@@ -11,7 +11,7 @@ export default class CommitCard {
 
   #template = () => {
     const markup = `
-      <div class="history__card">
+      <div class="history__card swiper-slide">
         <p class="history__card-date"></p>
         <div class="history__card-user-info">
           <img src="" alt="Фотография пользователя" class="history__card-photo">

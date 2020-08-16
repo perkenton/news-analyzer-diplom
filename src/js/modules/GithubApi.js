@@ -1,27 +1,25 @@
 'use strict';
 
 export default class GithubApi {
-  constructor() {
-    
+  constructor(GITHUB_API_URL) {
+    this.GITHUB_API_URL = GITHUB_API_URL;
   }
 
 
-  _fetchPromise = (partOfUrl) => {
-    return fetch(`${this.serverUrl}${partOfUrl}`, {
-      headers: this.headers
-    })
+  _fetchPromise = () => {
+    return fetch(`${this.GITHUB_API_URL}`)
 
       .then(res => {
         if(res.ok) {
           return res.json();
         }
 
-        return Promise.reject(new Error(`Ошибка: ${res.status}, ${res.statusText}`));
+        return Promise.reject(new Error(`${res.status}, ${res.statusText}`));
 
       })
   }
 
-  getCards() {
-    return this._fetchPromise(`cards`);
+  getCommits() {
+    return this._fetchPromise();
   }
 }
