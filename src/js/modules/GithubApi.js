@@ -5,8 +5,7 @@ export default class GithubApi {
     this.GITHUB_API_URL = GITHUB_API_URL;
   }
 
-
-  _fetchPromise = () => {
+  #fetchPromise = () => {
     return fetch(`${this.GITHUB_API_URL}`)
 
       .then(res => {
@@ -20,6 +19,6 @@ export default class GithubApi {
   }
 
   getCommits() {
-    return this._fetchPromise();
+    return this.#fetchPromise();
   }
 }

@@ -17,7 +17,7 @@ const GITHUB_API_URL = 'https://api.github.com/repos/perkenton/news-analyzer-dip
 const NEWS_API_CONFIG = {
   url: 'https://praktikum.tk/cohort11/',
   headers: {
-    authorization: 'de0a6226-ed6a-44a3-a602-c02f5db2fd29',
+    authorization: '153e4610e1864db79dbf8252a34f5610',
     'Content-Type': 'application/json'
   }
 }
