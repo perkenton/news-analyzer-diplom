@@ -32,7 +32,7 @@ import 'swiper/swiper-bundle.css';
     })
     
     .catch((err) => {
-      new CommitError(COMMIT_CARDS_CONTAINER, err).createAndRender();
+      new CommitError(COMMIT_CARDS_CONTAINER, err).add();
   });
 
 })();

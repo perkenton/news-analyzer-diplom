@@ -19,10 +19,15 @@ export default class CommitError {
     return element.firstElementChild;
   }
 
-  createAndRender = () => {
+  #create = () => {
     this.errorBlock = this.#template();
     this.errorBlock.querySelector('.not-found__subtitle').textContent = this.err;
 
+    return this.errorBlock;
+  }
+
+  add = () => {
+    this.#create();
     this.COMMIT_CARDS_CONTAINER.appendChild(this.errorBlock);
   }
 }
