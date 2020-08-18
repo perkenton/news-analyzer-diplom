@@ -2,7 +2,7 @@
   height: 272px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 @media (max-width: 850px) {

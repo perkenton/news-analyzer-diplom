@@ -1,13 +1,18 @@
 'use strict';
 
 export default class NewsApi {
-    constructor(GITHUB_API_URL) {
-    this.GITHUB_API_URL = GITHUB_API_URL;
+    constructor(NEWS_API_CONFIG) {
+    this.url = NEWS_API_CONFIG.url;
+    this.headers = NEWS_API_CONFIG.headers;
   }
 
 
-  _fetchPromise = () => {
-    return fetch(`${this.GITHUB_API_URL}`)
+  #fetchPromise = (request) => { //currentDate
+    return fetch(`${this.url}` + 
+      `q=${request}&` + 
+      'sortBy=popularity&' + 
+      `apiKey=${this.headers.authorization}` //currentDate
+    )
 
       .then(res => {
         if(res.ok) {
@@ -19,7 +24,7 @@ export default class NewsApi {
       })
   }
 
-  getNews() {
-    return this._fetchPromise();
+  getNews(request) {
+    return this.#fetchPromise(request); //currentDate
   }
 }

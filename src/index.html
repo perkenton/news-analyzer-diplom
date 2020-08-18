@@ -29,14 +29,15 @@
 
       <h1 class="search__title">Что в мире творится?</h1>
       <p class="search__descripton">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
-      <form class="search__form">
+      <form name="searchForm" class="search__form">
         <input 
+          name="searchInput"
           type="search" 
           placeholder="Введите тему новости" 
           class="search__input"  
           pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" 
           required>
-        <input type="submit" value="Искать" class="search__button">
+        <input name="searchSubmit" type="submit" value="Искать" class="search__button">
       </form>
 
     </section>
@@ -52,7 +53,7 @@
       <p class="not-found__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
     </section>
 
-    <section class="result">
+    <section class="result" >
       <div class="result__wrap-title">
         <h2 class="result__title">Результаты поиска</h2>
         <a href="./analytics.html" class="result__analytics-link">Посмотреть аналитику</a>
@@ -108,7 +109,7 @@
         </a> -->
       </div>
 
-      <button class="result__button-more" style="display: none;">Показать еще</button>
+      <button class="result__button-more" >Показать еще</button>
     </section> 
 
     <section class="about-author">
