@@ -31,6 +31,7 @@ import {
   const newsError = new NewsError(NEWS_NOT_FOUND_CONTAINER);
   const notFoundBlock = new NotFoundBlock(NEWS_NOT_FOUND_CONTAINER);
   const preloader = new Preloader;
+  
 
   const createNewsCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
     return new NewsCard({sourceName, title, description, urlToNews, urlToImage, publishedAt}).create();
@@ -41,14 +42,19 @@ import {
     return arr.slice(0,3);
   }
 
-  const data = dataStorage.getNewsArr();
-  const cutedArray = data.splice(3);
+  const showMore = new ShowMore(SHOW_MORE_BUTTON, newsCardList);
 
-  // console.log(cutedArray);
+  SHOW_MORE_BUTTON.addEventListener('click', () => {
+    showMore.showAnotherThree(dataStorage.getNewsArr().splice(3)); //
+  });
+
 
   const searching = (searchRequest) => {
+    NEWS_CARDS_CONTAINER.innerHTML = '';
+    // .result hide
     localStorage.clear();
     preloader.show();
+    showMore.hide();    
 
     newsApi.getNews(searchRequest)
         .then(res => {
@@ -65,8 +71,7 @@ import {
 
 
             newsCardList.render(threeNews(dataStorage.getNewsArr()));
-            // newsCardList.render(cutedArray);
-            SHOW_MORE_BUTTON.setAttribute('style', 'display: flex');
+            showMore.show();
           }
         })
         
@@ -78,18 +83,7 @@ import {
 
   const searchRequest = new SearchInput(SEARCH_FORM, INPUT_REQUEST, searching).setSubmitListener();
 
-  let number = 0;
-  const count = () => {
-    number += 1;
-    console.log(number);
-  }
 
-  SHOW_MORE_BUTTON.addEventListener('click', () => {
-    
-    new ShowMore(newsCardList, count).showAnotherThree();
-    
-    // count();
-  });
 
   // в конце колбека вызывается функция, которая обрезает массив и возвращает новый
   // в начале колбек принимает обрезанный массив

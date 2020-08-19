@@ -15,9 +15,9 @@ export default class NewsCardList {
     const alternativeUrlToImage = 'https://sun9-24.userapi.com/_xiL0k4_od_RDK9Xr9UZ21_LfkdjeOdgdOkBlQ/5bG-BnskZrk.jpg';
 
     // const arr = this.TEST_NEWS.articles[1];
-    const arr = res.slice(0,5);
+    // const arr = res.slice(0,5);
 
-    arr.forEach(item => {
+    res.forEach(item => {
       if (item.urlToImage != null) {
         this.addCard(item.source.name, item.title, item.description, item.url, item.urlToImage, item.publishedAt);
       } else {

@@ -1,35 +1,31 @@
 'use strict';
 
 export default class ShowMore {
-  constructor(newsCardList, count) {
-    this.count = count;
+  constructor(SHOW_MORE_BUTTON, newsCardList) {
+    this.SHOW_MORE_BUTTON = SHOW_MORE_BUTTON;
     this.newsCardList = newsCardList;
     this.number = 0;
   }
 
-  cutArray = (arr) => {
-    return arr.splice(3);
+  show = () => {
+    this.SHOW_MORE_BUTTON.setAttribute('style', 'display: flex');
   }
 
-  saveCatedArray = () => {
-    
+  hide = () => {
+    this.SHOW_MORE_BUTTON.setAttribute('style', 'display: none');
   }
 
-  counter = () => {
+  showAnotherThree = (arr) => {
+
+    const threeNews = arr.slice(this.number * 3, (this.number + 1) * 3);
+    this.newsCardList.render(threeNews);
+
+    let arrLegth = (arr.length - ((this.number + 1) * 3));
+
+    if(arrLegth <= 0) {
+      this.hide();
+    }
+
     this.number += 1;
-    console.log(this.number);
-    // return number;
-  }
-
-  showAnotherThree = () => {
-    // const cut = arr.slice(this.number * 3, (this.number + 1) * 3);
-    // this.newsCardList.render(cut);
-    // this.cutArray(arr);
-
-    this.counter();
-    // this.number += 1;
-    // console.log(this.number);
-    // return this.number;
-    // arr.forEach
   }
 }

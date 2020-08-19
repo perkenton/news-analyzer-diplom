@@ -11,6 +11,7 @@ export default class NewsApi {
     return fetch(`${this.url}` + 
       `q=${request}&` + 
       'sortBy=popularity&' + 
+      'pageSize=22&' +
       `apiKey=${this.headers.authorization}` //currentDate
     )
 
