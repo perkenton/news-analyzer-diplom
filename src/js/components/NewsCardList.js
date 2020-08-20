@@ -4,6 +4,20 @@ export default class NewsCardList {
   constructor(objNewsCardList) {
     this.NEWS_CARDS_CONTAINER = objNewsCardList.NEWS_CARDS_CONTAINER;
     this.createNewsCard = objNewsCardList.createNewsCard;
+    this.RESULT_CONTAINER = objNewsCardList.RESULT_CONTAINER;
+    this.formattingDate = objNewsCardList.formattingDate;
+  }
+
+  showResultContainer = () => {
+    this.RESULT_CONTAINER.setAttribute('style', 'display: block');
+  }
+
+  hideResultContainer = () => {
+    this.RESULT_CONTAINER.setAttribute('style', 'display: none');
+  }
+
+  clearCardsContainer = () => {
+    this.NEWS_CARDS_CONTAINER.innerHTML = '';
   }
 
   addCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
@@ -14,14 +28,12 @@ export default class NewsCardList {
   render = (res) => {
     const alternativeUrlToImage = 'https://sun9-24.userapi.com/_xiL0k4_od_RDK9Xr9UZ21_LfkdjeOdgdOkBlQ/5bG-BnskZrk.jpg';
 
-    // const arr = this.TEST_NEWS.articles[1];
-    // const arr = res.slice(0,5);
-
     res.forEach(item => {
+      const normalDateFormat = this.formattingDate(item.publishedAt);
       if (item.urlToImage != null) {
-        this.addCard(item.source.name, item.title, item.description, item.url, item.urlToImage, item.publishedAt);
+        this.addCard(item.source.name, item.title, item.description, item.url, item.urlToImage, normalDateFormat);
       } else {
-        this.addCard(item.source.name, item.title, item.description, item.url, alternativeUrlToImage, item.publishedAt);
+        this.addCard(item.source.name, item.title, item.description, item.url, alternativeUrlToImage, normalDateFormat);
       }
     });
   }

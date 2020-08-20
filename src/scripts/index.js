@@ -8,6 +8,12 @@ import NewsError from '../js/components/NewsError.js';
 import NotFoundBlock from '../js/components/NotFoundBlock.js';
 import Preloader from '../js/components/Preloader.js';
 import ShowMore from '../js/components/ShowMore.js';
+import sliceThreeNews from '../js/utils/sliceThreeNews.js';
+import initNewsFromLocalStorage from '../js/utils/initNewsFromLocalStorage.js';
+import formattingDate from '../js/utils/formattingDate.js';
+import lastWeek from '../js/utils/lastWeek.js';
+import currentDate from '../js/utils/currentDate.js';
+
 
 import {
   NEWS_CARDS_CONTAINER,
@@ -18,7 +24,6 @@ import {
   INPUT_REQUEST,
   SHOW_MORE_BUTTON,
 
-  TEST_NEWS,
 } from '../js/constants/constants.js';
 
 
@@ -31,46 +36,41 @@ import {
   const newsError = new NewsError(NEWS_NOT_FOUND_CONTAINER);
   const notFoundBlock = new NotFoundBlock(NEWS_NOT_FOUND_CONTAINER);
   const preloader = new Preloader;
-  
+  const date = new Date;
+
 
   const createNewsCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
     return new NewsCard({sourceName, title, description, urlToNews, urlToImage, publishedAt}).create();
   };
-  const newsCardList = new NewsCardList({NEWS_CARDS_CONTAINER, createNewsCard, TEST_NEWS});
-
-  const threeNews = (arr) => {
-    return arr.slice(0,3);
-  }
+  const newsCardList = new NewsCardList({NEWS_CARDS_CONTAINER, createNewsCard, RESULT_CONTAINER, formattingDate});
 
   const showMore = new ShowMore(SHOW_MORE_BUTTON, newsCardList);
 
-  SHOW_MORE_BUTTON.addEventListener('click', () => {
-    showMore.showAnotherThree(dataStorage.getNewsArr().splice(3)); //
-  });
+  
 
 
   const searching = (searchRequest) => {
-    NEWS_CARDS_CONTAINER.innerHTML = '';
-    // .result hide
+    newsCardList.clearCardsContainer();
+    newsCardList.hideResultContainer();
     localStorage.clear();
     preloader.show();
-    showMore.hide();    
+    showMore.hide();
+    notFoundBlock.hide();  
 
-    newsApi.getNews(searchRequest)
+    newsApi.getNews(searchRequest, lastWeek, currentDate)
         .then(res => {
           dataStorage.createDataStorage(searchRequest, res.articles);
 
           if(res.articles.length === 0) {
             preloader.hide();
-            RESULT_CONTAINER.setAttribute('style', 'display: none');
+            newsCardList.hideResultContainer();
             notFoundBlock.show();
+            localStorage.clear();
           } else {
             notFoundBlock.hide();
             preloader.hide();
-            RESULT_CONTAINER.setAttribute('style', 'display: block');
-
-
-            newsCardList.render(threeNews(dataStorage.getNewsArr()));
+            newsCardList.showResultContainer();
+            newsCardList.render(sliceThreeNews(dataStorage.getNewsArr()));
             showMore.show();
           }
         })
@@ -81,11 +81,15 @@ import {
       });
   };
 
-  const searchRequest = new SearchInput(SEARCH_FORM, INPUT_REQUEST, searching).setSubmitListener();
 
 
+  const searchRequest = new SearchInput(SEARCH_FORM, INPUT_REQUEST, dataStorage, searching);
+  searchRequest.setSubmitListener();
 
-  // в конце колбека вызывается функция, которая обрезает массив и возвращает новый
-  // в начале колбек принимает обрезанный массив
+  initNewsFromLocalStorage(dataStorage, newsCardList, sliceThreeNews, searchRequest, showMore);
 
+  SHOW_MORE_BUTTON.addEventListener('click', () => {
+    showMore.showAnotherThree(dataStorage.getNewsArr().splice(3)); //
+  });
+  
 })();

@@ -15,6 +15,6 @@ export default class DataStorage {
   }
 
   getSearchRequest = () => {
-    return JSON.parse(localStorage.getItem('request'));
+    return localStorage.getItem('request');
   }
 }
