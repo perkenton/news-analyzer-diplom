@@ -1,0 +1,9 @@
+.search__input_is-invalid {
+  transition: .2s linear;
+}
+
+.search__input_is-invalid:focus {
+  outline: none;
+  border: 1px solid #FF0000;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 1);
+}

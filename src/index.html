@@ -29,15 +29,16 @@
 
       <h1 class="search__title">Что в мире творится?</h1>
       <p class="search__descripton">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
-      <form name="searchForm" class="search__form">
+      <form name="searchForm" class="search__form" novalidate>
         <input 
           name="searchInput"
           type="search" 
           placeholder="Введите тему новости" 
-          class="search__input"  
+          class="search__input search__input_is-valid"  
           pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" 
           required>
-        <input name="searchSubmit" type="submit" value="Искать" class="search__button">
+        <button name="searchSubmit" type="submit" class="search__button search__button_is-active" disabled="">Искать</button>
+        <span class="search__input-error" style="display: none;"></span>
       </form>
 
     </section>

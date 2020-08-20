@@ -1,0 +1,9 @@
+.search__input_is-valid {
+  transition: .2s linear;
+}
+
+.search__input_is-valid:focus {
+  outline: none;
+  border: 1px solid #2f71e5;
+  box-shadow: 0 0 4px rgba(47, 113, 229, 1);
+}

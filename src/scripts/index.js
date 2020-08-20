@@ -13,6 +13,7 @@ import initNewsFromLocalStorage from '../js/utils/initNewsFromLocalStorage.js';
 import formattingDate from '../js/utils/formattingDate.js';
 import lastWeek from '../js/utils/lastWeek.js';
 import currentDate from '../js/utils/currentDate.js';
+import FormValidator from '../js/utils/FormValidator.js';
 
 
 import {
@@ -21,6 +22,8 @@ import {
   RESULT_CONTAINER,
   NEWS_API_CONFIG,
   SEARCH_FORM,
+  ERROR_MESSAGES,
+  ERROR_BLOCK,
   INPUT_REQUEST,
   SHOW_MORE_BUTTON,
 
@@ -36,8 +39,7 @@ import {
   const newsError = new NewsError(NEWS_NOT_FOUND_CONTAINER);
   const notFoundBlock = new NotFoundBlock(NEWS_NOT_FOUND_CONTAINER);
   const preloader = new Preloader;
-  const date = new Date;
-
+  const formValidator = new FormValidator(SEARCH_FORM, ERROR_MESSAGES, ERROR_BLOCK);
 
   const createNewsCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
     return new NewsCard({sourceName, title, description, urlToNews, urlToImage, publishedAt}).create();
@@ -46,7 +48,7 @@ import {
 
   const showMore = new ShowMore(SHOW_MORE_BUTTON, newsCardList);
 
-  
+  formValidator.addListener();
 
 
   const searching = (searchRequest) => {
@@ -55,7 +57,8 @@ import {
     localStorage.clear();
     preloader.show();
     showMore.hide();
-    notFoundBlock.hide();  
+    notFoundBlock.hide();
+    document.querySelector('.search__button').setAttribute('disabled', 'disabled');
 
     newsApi.getNews(searchRequest, lastWeek, currentDate)
         .then(res => {
@@ -91,5 +94,5 @@ import {
   SHOW_MORE_BUTTON.addEventListener('click', () => {
     showMore.showAnotherThree(dataStorage.getNewsArr().splice(3)); //
   });
-  
+
 })();

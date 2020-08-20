@@ -1,0 +1,16 @@
+.search__button_is-active {
+  transition: .2s linear;
+  background-color: #2F71E5;
+}
+
+.search__button_is-active:hover {
+ background-color: #347EFF; 
+}
+
+.search__button_is-active:active {
+ background-color: #2A65CC; 
+}
+
+.search__button_is-active:focus {
+ background-color: #347EFF;
+}

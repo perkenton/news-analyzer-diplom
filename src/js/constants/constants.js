@@ -4,6 +4,8 @@ export {
   RESULT_CONTAINER,
   NEWS_API_CONFIG,
   SEARCH_FORM,
+  ERROR_MESSAGES,
+  ERROR_BLOCK,
   INPUT_REQUEST,
   SHOW_MORE_BUTTON,
   COMMIT_CARDS_CONTAINER,
@@ -29,6 +31,13 @@ const NEWS_API_CONFIG = {
 };
 
 const SEARCH_FORM = document.forms.searchForm;
+
+const ERROR_MESSAGES = {
+    empty: 'Введите запрос',
+    wrongRequest: 'Запрос может содержать кириллицу, латиницу или цифры',
+  };
+
+const ERROR_BLOCK = SEARCH_FORM.querySelector('.search__input-error');
 
 const INPUT_REQUEST = searchForm.elements.searchInput;
 

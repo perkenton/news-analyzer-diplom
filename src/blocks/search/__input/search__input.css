@@ -38,12 +38,6 @@
 .search__input::-webkit-search-results-button { display: none; }
 .search__input::-webkit-search-results-decoration { display: none; }
 
-.search__input:focus {
-  outline: none;
-  border: 1px solid #2f71e5;
-  box-shadow: 0 0 4px rgba(47, 113, 229, 1);
-}
-
 @media (max-width: 768px) {
   .search__input {
     width: 452px;
