@@ -13,7 +13,7 @@ export default class NewsApi {
       `from=${lastWeek()}&` + 
       `to=${currentDate()}&` +
       'sortBy=popularity&' + 
-      'pageSize=22&' +
+      'pageSize=100&' +
       `apiKey=${this.headers.authorization}`
     )
 

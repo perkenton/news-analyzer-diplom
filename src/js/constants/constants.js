@@ -39,7 +39,7 @@ const ERROR_MESSAGES = {
 
 const ERROR_BLOCK = SEARCH_FORM.querySelector('.search__input-error');
 
-const INPUT_REQUEST = searchForm.elements.searchInput;
+const INPUT_REQUEST = SEARCH_FORM.elements.searchInput;
 
 const SHOW_MORE_BUTTON = document.querySelector('.result__button-more');
 
