@@ -2,8 +2,8 @@
 
 export default class FormValidator {
 
-  constructor(SEARCH_FORM, ERROR_MESSAGES, ERROR_BLOCK) {
-    this.SEARCH_FORM = SEARCH_FORM;
+  constructor(searchForm, ERROR_MESSAGES, ERROR_BLOCK) {
+    this.searchForm = searchForm;
     this.ERROR_MESSAGES = ERROR_MESSAGES;
     this.ERROR_BLOCK = ERROR_BLOCK;
   }
@@ -26,7 +26,7 @@ export default class FormValidator {
   }
 
   _isInputValid = (input) => {
-    const errorElem = this.SEARCH_FORM.querySelector('.search__input-error');
+    const errorElem = this.searchForm.querySelector('.search__input-error');
     const valid = this._isValid(input);
     errorElem.textContent = input.validationMessage;
     return valid;
@@ -64,7 +64,7 @@ export default class FormValidator {
   }
 
   addListener = () => {
-    this.SEARCH_FORM.addEventListener('input', this._handlerInputForm, true);
+    this.searchForm.addEventListener('input', this._handlerInputForm, true);
   }
 
 }

@@ -3,18 +3,17 @@ export {
   NEWS_NOT_FOUND_CONTAINER,
   RESULT_CONTAINER,
   NEWS_API_CONFIG,
-  SEARCH_FORM,
   ERROR_MESSAGES,
   ERROR_BLOCK,
-  INPUT_REQUEST,
   SHOW_MORE_BUTTON,
   COMMIT_CARDS_CONTAINER,
   GITHUB_API_URL,
   SWIPER_CONTAINER,
   SWIPER_CONFIG,
+  LINE_CHART_CONTAINER,
 };
 
-
+// index.js constants
 
 const NEWS_CARDS_CONTAINER = document.querySelector('.result__cards-list');
 
@@ -30,25 +29,22 @@ const NEWS_API_CONFIG = {
   }
 };
 
-const SEARCH_FORM = document.forms.searchForm;
-
 const ERROR_MESSAGES = {
     empty: 'Введите запрос',
     wrongRequest: 'Запрос может содержать кириллицу, латиницу или цифры',
   };
 
-const ERROR_BLOCK = SEARCH_FORM.querySelector('.search__input-error');
-
-const INPUT_REQUEST = SEARCH_FORM.elements.searchInput;
+const ERROR_BLOCK = document.querySelector('.search__input-error');
 
 const SHOW_MORE_BUTTON = document.querySelector('.result__button-more');
 
+// about.js constants
 
 const COMMIT_CARDS_CONTAINER = document.querySelector('.history__cards-list');
 
 const GITHUB_API_URL = 'https://api.github.com/repos/perkenton/news-analyzer-diplom/commits';
 
-const SWIPER_CONTAINER = '.swiper-container';
+const SWIPER_CONTAINER = document.querySelector('.swiper-container');
 
 const SWIPER_CONFIG = {
   init: true,
@@ -68,4 +64,8 @@ const SWIPER_CONFIG = {
     prevEl: '.swiper-button-prev',
   },
 }
+
+// analitics.js constants
+
+const LINE_CHART_CONTAINER = document.querySelector('.tabel__statistics');
 

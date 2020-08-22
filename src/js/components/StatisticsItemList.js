@@ -1,23 +1,22 @@
 'use strict';
 
 export default class StatisticsItemList {
-  constructor() {
-    // this.newsArr = newsArr;
+  constructor(LINE_CHART_CONTAINER, createStatisticsItem, searchDayOfWeek) {
+    this.LINE_CHART_CONTAINER = LINE_CHART_CONTAINER;
+    this.createStatisticsItem = createStatisticsItem;
+    this.searchDayOfWeek = searchDayOfWeek;
   }
 
-  addItem = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
-    // const card = this.createNewsCard(sourceName, title, description, urlToNews, urlToImage, publishedAt);
-    // this.NEWS_CARDS_CONTAINER.appendChild(card);
+  addItem = (newsDate, newsDayOfWeek, numberNews) => {
+    const item = this.createStatisticsItem(newsDate, newsDayOfWeek, numberNews);
+    this.LINE_CHART_CONTAINER.appendChild(item);
   }
 
   render = (res) => {
-    // res.forEach(item => {
-    //   const normalDateFormat = this.formattingDate(item.publishedAt);
-    //   if (item.urlToImage != null) {
-    //     this.addCard(item.source.name, item.title, item.description, item.url, item.urlToImage, normalDateFormat);
-    //   } else {
-    //     this.addCard(item.source.name, item.title, item.description, item.url, alternativeUrlToImage, normalDateFormat);
-    //   }
-    // });
+    res.forEach(item => {
+      const newsDayOfWeek = this.searchDayOfWeek(item.date);
+      this.addItem(item.day, newsDayOfWeek, item.quantity);
+    });
+
   }
 }

@@ -11,7 +11,7 @@ import ShowMore from '../js/components/ShowMore.js';
 import sliceThreeNews from '../js/utils/sliceThreeNews.js';
 import initNewsFromLocalStorage from '../js/utils/initNewsFromLocalStorage.js';
 import formattingDate from '../js/utils/formattingDate.js';
-import lastWeek from '../js/utils/lastWeek.js';
+import weekAgo from '../js/utils/weekAgo.js';
 import currentDate from '../js/utils/currentDate.js';
 import FormValidator from '../js/utils/FormValidator.js';
 
@@ -21,10 +21,8 @@ import {
   NEWS_NOT_FOUND_CONTAINER,
   RESULT_CONTAINER,
   NEWS_API_CONFIG,
-  SEARCH_FORM,
   ERROR_MESSAGES,
   ERROR_BLOCK,
-  INPUT_REQUEST,
   SHOW_MORE_BUTTON,
 
 } from '../js/constants/constants.js';
@@ -34,12 +32,15 @@ import {
 
 (function() {
 
+  const searchForm = document.forms.searchForm;
+  const inputRequest = searchForm.elements.searchInput;
   const newsApi = new NewsApi(NEWS_API_CONFIG);
   const dataStorage = new DataStorage();
   const newsError = new NewsError(NEWS_NOT_FOUND_CONTAINER);
   const notFoundBlock = new NotFoundBlock(NEWS_NOT_FOUND_CONTAINER);
   const preloader = new Preloader;
-  const formValidator = new FormValidator(SEARCH_FORM, ERROR_MESSAGES, ERROR_BLOCK);
+  const formValidator = new FormValidator(searchForm, ERROR_MESSAGES, ERROR_BLOCK);
+
 
   const createNewsCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
     return new NewsCard({sourceName, title, description, urlToNews, urlToImage, publishedAt}).create();
@@ -60,7 +61,7 @@ import {
     notFoundBlock.hide();
     document.querySelector('.search__button').setAttribute('disabled', 'disabled');
 
-    newsApi.getNews(searchRequest, lastWeek, currentDate)
+    newsApi.getNews(searchRequest, weekAgo, currentDate)
         .then(res => {
           dataStorage.createDataStorage(searchRequest, res.articles);
 
@@ -86,7 +87,7 @@ import {
 
 
 
-  const searchRequest = new SearchInput(SEARCH_FORM, INPUT_REQUEST, dataStorage, searching);
+  const searchRequest = new SearchInput(searchForm, inputRequest, dataStorage, searching);
   searchRequest.setSubmitListener();
 
   initNewsFromLocalStorage(dataStorage, newsCardList, sliceThreeNews, searchRequest, showMore);

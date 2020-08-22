@@ -1,4 +1,7 @@
-@import url(./__news-for-week/.request-data__news-for-week.css);
+@import url(./__is-data/request-data__is-data.css);
+@import url(./__link/request-data__link.css);
+@import url(./__news-for-week/request-data__news-for-week.css);
+@import url(./__no-data/request-data__no-data.css);
 @import url(./__paragraph/request-data__paragraph.css);
 @import url(./__paragraph/_bold-text/request-data__paragraph_bold-text.css);
 @import url(./__request/request-data__request.css);

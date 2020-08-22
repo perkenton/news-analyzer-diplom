@@ -7,10 +7,10 @@ export default class NewsApi {
   }
 
 
-  #fetchPromise = (request, lastWeek, currentDate) => { 
+  #fetchPromise = (request, weekAgo, currentDate) => { 
     return fetch(`${this.url}` + 
       `q=${request}&` + 
-      `from=${lastWeek()}&` + 
+      `from=${weekAgo()}&` + 
       `to=${currentDate()}&` +
       'sortBy=popularity&' + 
       'pageSize=100&' +
@@ -27,7 +27,7 @@ export default class NewsApi {
       })
   }
 
-  getNews(request, lastWeek, currentDate) {
-    return this.#fetchPromise(request, lastWeek, currentDate);
+  getNews(request, weekAgo, currentDate) {
+    return this.#fetchPromise(request, weekAgo, currentDate);
   }
 }

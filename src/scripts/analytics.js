@@ -4,81 +4,52 @@ import DataStorage from '../js/modules/DataStorage.js';
 import Statistics from '../js/components/Statistics.js';
 import StatisticsItem from '../js/components/StatisticsItem.js';
 import StatisticsItemList from '../js/components/StatisticsItemList.js';
+import searchDayOfWeek from '../js/utils/searchDayOfWeek.js';
+import weekAgo from '../js/utils/weekAgo.js';
+import currentDate from '../js/utils/currentDate.js';
+import getMonth from '../js/utils/getMonth.js';
 
-// import {
-  
-
-// } from '../js/constants/constants.js';
+import {
+  LINE_CHART_CONTAINER,
+} from '../js/constants/constants.js';
 
 
 'use strict';
 
 (function() {
-
-  const dataStorage = new DataStorage();
-  const newsArr = dataStorage.getNewsArr();
-  const statistics = new Statistics(newsArr);
-
-  const requestElem = document.querySelector('.request-data__request');
-  const newsForWeekElem = document.querySelector('.request-data__news-for-week');
-  const requestInTitleElem = document.querySelector('.request-data__request-in-title');
   
-  const request = dataStorage.getSearchRequest();
+  const initAnanlisys = () => {
+    const dataStorage = new DataStorage();
+    const newsArr = dataStorage.getNewsArr();
 
-  // console.log(dataStorage.getSearchRequest());
+    if(newsArr !== null) {
+      document.querySelector('.request-data__no-data').setAttribute('style', 'display: none');
+      document.querySelector('.request-data__is-data').setAttribute('style', 'display: block');
+      document.querySelector('.tabel').setAttribute('style', 'display: block');
+      const request = dataStorage.getSearchRequest();
+      const statistics = new Statistics(newsArr);
 
-  const fillHeader = () => {
-    requestElem.textContent = request;
+      const statisticsData = statistics.makeObject();
+      const requestCounter = statistics.numberOfRequestInTitle(newsArr, request);
 
-    let requestCounter = 0;
+      const createStatisticsItem = (newsDate, newsDayOfWeek, numberNews) => {
+        return new StatisticsItem(newsDate, newsDayOfWeek, numberNews).create();
+      };
+      const statisticsItemList = new StatisticsItemList(LINE_CHART_CONTAINER, createStatisticsItem, searchDayOfWeek);
+      statisticsItemList.render(statisticsData);
 
-    newsArr.forEach(item => {
-      if(item.title.toLowerCase().includes(request.toLowerCase()) === true) {
-        ++requestCounter;
-      }
-      return requestCounter;
-    })
 
-    // console.log(requestCounter);
-
-    newsForWeekElem.textContent = newsArr.length;
-    requestInTitleElem.textContent = requestCounter;
+      const fillPage = () => {
+        const month = getMonth();
+        document.querySelector('.request-data__request').textContent = request;
+        document.querySelector('.request-data__news-for-week').textContent = newsArr.length;
+        document.querySelector('.request-data__request-in-title').textContent = requestCounter;
+        document.querySelector('.tabel__date-month').textContent = month;
+      };
+      fillPage();
+    }
   };
-  fillHeader();
 
-
-  // const newsArrToDays = () => {
-  //   const arrPublishedAt = [];
-
-  //   newsArr.forEach(item => {
-  //     arrPublishedAt.push(item.publishedAt.slice(0, 10));
-  //   })
-
-  //   arrPublishedAt.sort();
-  //   console.log(arrPublishedAt);
-
-  //   const numberRequest =[];
-
-  //   function counerNews() {
-  //     let count = 1;
-
-  //     for (var i = 0; i < arrPublishedAt.length; i = i + count) {
-  //       count = 1;
-  //       for (var j = i + 1; j < arrPublishedAt.length; j++) {
-  //         if (arrPublishedAt[i] === arrPublishedAt[j])
-  //           count++;
-            
-  //       }
-  //       numberRequest.push(count);
-        
-  //       }
-  //       return numberRequest;
-  //     }
-  //     counerNews();
-  //     console.log(numberRequest);
-  //   }
-
-  // newsArrToDays();
-  console.log(statistics.numberNewsByDay());
+  initAnanlisys();
 
 })();

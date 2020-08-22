@@ -1,8 +1,10 @@
 'use strict';
 
 export default class StatisticsItem {
-  constructor(newsArr) {
-    this.newsArr = newsArr;
+  constructor(newsDate, newsDayOfWeek, numberNews) {
+    this.newsDate = newsDate;
+    this.newsDayOfWeek = newsDayOfWeek;
+    this.numberNews = numberNews;
   }
 
   #template = () => {
@@ -21,9 +23,9 @@ export default class StatisticsItem {
   create = () => {
     this.item = this.#template();
 
-    this.item.querySelector('.tabel__date').textContent = this.publishedAt;
-    this.item.querySelector('.tabel__strip').textContent = this.publishedAt;
-    this.item.querySelector('.tabel__strip').setAttribute('style', `width: ${this.urlToImage}%`);
+    this.item.querySelector('.tabel__date').textContent = `${this.newsDate}, ${this.newsDayOfWeek}`;
+    this.item.querySelector('.tabel__strip').textContent = this.numberNews;
+    this.item.querySelector('.tabel__strip').setAttribute('style', `width: ${this.numberNews}%`);
 
     return this.item;
   }

@@ -29,13 +29,18 @@
       <a href="./index.html" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__current-location"> / Аналитика</span>
     </div>
 
-    <section class="request-data">
-      <h1 class="request-data__title">Вы&nbsp;спросили: &laquo;<span class="request-data__request">Путешествия</span>&raquo;</h1>
-      <p class="request-data__paragraph">Новостей за&nbsp;неделю: <span class="request-data__paragraph_bold-text request-data__news-for-week"></span></p>
-      <p class="request-data__paragraph">Упоминаний в&nbsp;заголовках: <span class="request-data__paragraph_bold-text request-data__request-in-title" title="Поиск произведен в строгом соответствии текст запроса без учета регистра"></span></p>
+    <section class="request-data request-data__no-data" style="display: block;">
+      <h1 class="request-data__title">Нет данных для анализа</h1>
+      <p class="request-data__paragraph">Введите запрос на&nbsp;<a href="./index.html" class="request-data__link">главной</a> странице.</p>
     </section>
 
-    <section class="tabel">
+    <section class="request-data request-data__is-data" style="display: none;">
+      <h1 class="request-data__title">Вы&nbsp;спросили: &laquo;<span class="request-data__request"></span>&raquo;</h1>
+      <p class="request-data__paragraph" title="Предел бесплатной версии сервиса — 100 новостей">Новостей за&nbsp;неделю: <span class="request-data__paragraph_bold-text request-data__news-for-week"></span></p>
+      <p class="request-data__paragraph" title="Поиск произведен в строгом соответствии текста запроса без учета регистра">Упоминаний в&nbsp;заголовках: <span class="request-data__paragraph_bold-text request-data__request-in-title"></span></p>
+    </section>
+
+    <section class="tabel" style="display: none;">
       <div class="tabel__wrap">
         <h2 class="tabel__title">Аналитика по&nbsp;дням</h2>
         <div class="tabel__line-chart">
@@ -43,7 +48,7 @@
           <div class="tabel__grid-heading">
             <div class="tabel__date-heading">
               <span class="tabel__date-string">Дата</span>
-              <span class="tabel__date-string">(август)</span>
+              <span class="tabel__date-string tabel__date-month"></span>
             </div>
             <span class="tabel__quantity-heading">Кол-во упоминаний</span>
           </div>
@@ -59,7 +64,7 @@
           </div>
           
           <div class="tabel__statistics">
-            <div class="tabel__grid-two-columns">
+            <!-- <div class="tabel__grid-two-columns">
               <span class="tabel__date">19, пн</span>
               <span class="tabel__strip" style="width: 15%;">15</span>
             </div>
@@ -92,7 +97,7 @@
             <div class="tabel__grid-two-columns">
               <span class="tabel__date">25, вс</span>
               <span class="tabel__strip" style="width: 34%;">34</span>
-            </div>
+            </div> -->
           </div>
 
           <div class="tabel__grid-chart-items">
