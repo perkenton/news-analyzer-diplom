@@ -26,7 +26,7 @@ export default class NewsCardList {
   }
 
   render = (res) => {
-    const alternativeUrlToImage = '../../images/image_is_null.jpg';
+    const alternativeUrlToImage = 'http://perken.ru/images/image_is_null.jpg';
 
     res.forEach(item => {
       const normalDateFormat = this.formattingDate(item.publishedAt);
