@@ -36,6 +36,7 @@ import {
   const inputRequest = searchForm.elements.searchInput;
   const newsApi = new NewsApi(NEWS_API_CONFIG);
   const dataStorage = new DataStorage();
+  const newsArr = dataStorage.getNewsArr();
   const newsError = new NewsError(NEWS_NOT_FOUND_CONTAINER);
   const notFoundBlock = new NotFoundBlock(NEWS_NOT_FOUND_CONTAINER);
   const preloader = new Preloader;
@@ -47,10 +48,9 @@ import {
   };
   const newsCardList = new NewsCardList({NEWS_CARDS_CONTAINER, createNewsCard, RESULT_CONTAINER, formattingDate});
 
-  const showMore = new ShowMore(SHOW_MORE_BUTTON, newsCardList);
+  const showMore = new ShowMore(SHOW_MORE_BUTTON, newsCardList, dataStorage);
 
   formValidator.addListener();
-
 
   const searching = (searchRequest) => {
     newsCardList.clearCardsContainer();
@@ -85,15 +85,10 @@ import {
       });
   };
 
-
-
   const searchRequest = new SearchInput(searchForm, inputRequest, dataStorage, searching);
   searchRequest.setSubmitListener();
 
   initNewsFromLocalStorage(dataStorage, newsCardList, sliceThreeNews, searchRequest, showMore);
 
-  SHOW_MORE_BUTTON.addEventListener('click', () => {
-    showMore.showAnotherThree(dataStorage.getNewsArr().splice(3)); //
-  });
 
 })();

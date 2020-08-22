@@ -4,8 +4,7 @@ import currentDate from './currentDate.js';
 
 export default function weekAgo() {
   const currentTime = new Date().getTime();
-  const lastWeek = currentTime - 86400000 * 6;
+  const lastWeek = currentTime - 86400000 * 7;
   const dateWeekAgo = new Date(lastWeek);
-  console.log(dateWeekAgo.toJSON().slice(0, 10));
   return dateWeekAgo.toJSON().slice(0, 10);
 }

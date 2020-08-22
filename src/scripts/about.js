@@ -14,7 +14,6 @@ import {
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
-
 'use strict';
 
 (function() {

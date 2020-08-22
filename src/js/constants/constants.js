@@ -54,14 +54,16 @@ const SWIPER_CONFIG = {
   loop: true,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: '.history__pagination',
     type: 'bullets',
     clickable: true,
+    bulletClass: 'history__pagination-item',
+    bulletActiveClass: 'history__pagination-item_active',
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.history__card-arrow-right',
+    prevEl: '.history__card-arrow-left',
   },
 }
 

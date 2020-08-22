@@ -17,7 +17,7 @@ export default class NewsCardList {
   }
 
   clearCardsContainer = () => {
-    this.NEWS_CARDS_CONTAINER.innerHTML = '';
+    this.NEWS_CARDS_CONTAINER.textContent = '';
   }
 
   addCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
@@ -26,7 +26,7 @@ export default class NewsCardList {
   }
 
   render = (res) => {
-    const alternativeUrlToImage = 'https://sun9-24.userapi.com/_xiL0k4_od_RDK9Xr9UZ21_LfkdjeOdgdOkBlQ/5bG-BnskZrk.jpg';
+    const alternativeUrlToImage = '../../images/image_is_null.jpg';
 
     res.forEach(item => {
       const normalDateFormat = this.formattingDate(item.publishedAt);

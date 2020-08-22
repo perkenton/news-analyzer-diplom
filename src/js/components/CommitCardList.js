@@ -13,7 +13,7 @@ export default class CommitCardList {
   }
 
   render = () => {
-    const alternativeAvatar = 'https://sun9-65.userapi.com/b8gycPnXk-iBxKp8S-LuwTdPX1dEgQbhSNfJag/9bOPuVd-_9k.jpg';
+    const alternativeAvatar = 'https://avatars3.githubusercontent.com/u/42587922?v=4';
 
     const arr = this.res.slice(0, 20);
     

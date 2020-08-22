@@ -35,6 +35,7 @@ export default class NewsCard {
     this.newsCard.querySelector('.card__image').setAttribute('style', `background-image: url(${this.urlToImage})`);
     this.newsCard.querySelector('.card__published-at').textContent = this.publishedAt;
     this.newsCard.querySelector('.card__title').textContent = this.title;
+    this.newsCard.querySelector('.card__title').setAttribute('title', `${this.title}`);
     this.newsCard.querySelector('.card__description').textContent = this.description;
     this.newsCard.querySelector('.card__source-name').textContent = this.sourceName;
 
