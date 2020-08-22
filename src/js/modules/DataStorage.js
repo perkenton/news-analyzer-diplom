@@ -17,4 +17,8 @@ export default class DataStorage {
   getSearchRequest = () => {
     return localStorage.getItem('request');
   }
+
+  clear = () => {
+    localStorage.clear();
+  }
 }

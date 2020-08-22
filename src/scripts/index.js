@@ -55,7 +55,7 @@ import {
   const searching = (searchRequest) => {
     newsCardList.clearCardsContainer();
     newsCardList.hideResultContainer();
-    localStorage.clear();
+    dataStorage.clear();
     preloader.show();
     showMore.hide();
     notFoundBlock.hide();
