@@ -66,8 +66,12 @@ export default class Statistics {
     let requestCounter = 0;
 
     newsArr.forEach(item => {
-      if(item.title.toLowerCase().includes(request.toLowerCase()) === true) {
-        ++requestCounter;
+      if(item.title !== null) {
+        if(item.title.toLowerCase().includes(request.toLowerCase()) === true) {
+          ++requestCounter;
+        }
+      } else {
+        console.log('А в заголовке есть null!')
       }
     })
     

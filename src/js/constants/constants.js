@@ -1,4 +1,7 @@
 export { 
+  NEWS_SEARCH_PERIOD,
+  NUMBER_OF_NEWS_TO_SHOW,
+  NUMBER_OF_NEWS_TO_SHOW_MORE,
   NEWS_CARDS_CONTAINER,
   NEWS_NOT_FOUND_CONTAINER,
   RESULT_CONTAINER,
@@ -6,6 +9,7 @@ export {
   ERROR_MESSAGES,
   ERROR_BLOCK,
   SHOW_MORE_BUTTON,
+  NUMBER_OF_COMMITS,
   COMMIT_CARDS_CONTAINER,
   GITHUB_API_URL,
   SWIPER_CONTAINER,
@@ -14,6 +18,12 @@ export {
 };
 
 // index.js constants
+
+const NEWS_SEARCH_PERIOD = 7;
+
+const NUMBER_OF_NEWS_TO_SHOW = 3;
+
+const NUMBER_OF_NEWS_TO_SHOW_MORE = 3;
 
 const NEWS_CARDS_CONTAINER = document.querySelector('.result__cards-list');
 
@@ -39,6 +49,8 @@ const ERROR_BLOCK = document.querySelector('.search__input-error');
 const SHOW_MORE_BUTTON = document.querySelector('.result__button-more');
 
 // about.js constants
+
+const NUMBER_OF_COMMITS = 20;
 
 const COMMIT_CARDS_CONTAINER = document.querySelector('.history__cards-list');
 

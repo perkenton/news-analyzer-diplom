@@ -11,12 +11,14 @@ import ShowMore from '../js/components/ShowMore.js';
 import sliceThreeNews from '../js/utils/sliceThreeNews.js';
 import initNewsFromLocalStorage from '../js/utils/initNewsFromLocalStorage.js';
 import formattingDate from '../js/utils/formattingDate.js';
-import weekAgo from '../js/utils/weekAgo.js';
+import searchPeriod from '../js/utils/searchPeriod.js';
 import currentDate from '../js/utils/currentDate.js';
 import FormValidator from '../js/utils/FormValidator.js';
 
 
 import {
+  NUMBER_OF_NEWS_TO_SHOW,
+  NUMBER_OF_NEWS_TO_SHOW_MORE,
   NEWS_CARDS_CONTAINER,
   NEWS_NOT_FOUND_CONTAINER,
   RESULT_CONTAINER,
@@ -24,7 +26,6 @@ import {
   ERROR_MESSAGES,
   ERROR_BLOCK,
   SHOW_MORE_BUTTON,
-
 } from '../js/constants/constants.js';
 
 
@@ -42,13 +43,12 @@ import {
   const preloader = new Preloader;
   const formValidator = new FormValidator(searchForm, ERROR_MESSAGES, ERROR_BLOCK);
 
-
   const createNewsCard = (sourceName, title, description, urlToNews, urlToImage, publishedAt) => {
     return new NewsCard({sourceName, title, description, urlToNews, urlToImage, publishedAt}).create();
   };
   const newsCardList = new NewsCardList({NEWS_CARDS_CONTAINER, createNewsCard, RESULT_CONTAINER, formattingDate});
 
-  const showMore = new ShowMore(SHOW_MORE_BUTTON, newsCardList, dataStorage);
+  const showMore = new ShowMore({SHOW_MORE_BUTTON, newsCardList, dataStorage, NUMBER_OF_NEWS_TO_SHOW_MORE});
 
   formValidator.addListener();
 
@@ -61,7 +61,7 @@ import {
     notFoundBlock.hide();
     document.querySelector('.search__button').setAttribute('disabled', 'disabled');
 
-    newsApi.getNews(searchRequest, weekAgo, currentDate)
+    newsApi.getNews(searchRequest, searchPeriod, currentDate)
         .then(res => {
           dataStorage.createDataStorage(searchRequest, res.articles);
 

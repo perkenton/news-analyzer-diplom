@@ -4,7 +4,9 @@ import CommitCard from '../js/components/CommitCard.js';
 import CommitCardList from '../js/components/CommitCardList.js';
 import CommitError from '../js/components/CommitError.js';
 import GithubApi from '../js/modules/GithubApi.js';
+import formattingDate from '../js/utils/formattingDate.js';
 import {
+  NUMBER_OF_COMMITS,
   COMMIT_CARDS_CONTAINER,
   GITHUB_API_URL,
   SWIPER_CONTAINER,
@@ -24,7 +26,7 @@ import 'swiper/swiper-bundle.css';
 
   new GithubApi(GITHUB_API_URL).getCommits()
     .then(res => {
-      new CommitCardList({COMMIT_CARDS_CONTAINER, createCommitCard, res}).render();
+      new CommitCardList({COMMIT_CARDS_CONTAINER, createCommitCard, res, NUMBER_OF_COMMITS, formattingDate}).render();
 
       Swiper.use([Navigation, Pagination]);
       new Swiper(SWIPER_CONTAINER, SWIPER_CONFIG);

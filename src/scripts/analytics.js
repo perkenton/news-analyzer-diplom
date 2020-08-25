@@ -5,7 +5,6 @@ import Statistics from '../js/components/Statistics.js';
 import StatisticsItem from '../js/components/StatisticsItem.js';
 import StatisticsItemList from '../js/components/StatisticsItemList.js';
 import searchDayOfWeek from '../js/utils/searchDayOfWeek.js';
-import weekAgo from '../js/utils/weekAgo.js';
 import currentDate from '../js/utils/currentDate.js';
 import getMonth from '../js/utils/getMonth.js';
 

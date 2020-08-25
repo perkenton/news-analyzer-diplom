@@ -33,7 +33,9 @@ export default class CommitCard {
     this.commitCard.querySelector('.history__card-date').textContent = this.commitDate;
     this.commitCard.querySelector('.history__card-photo').setAttribute('src', `${this.commiterAvatarUrl}`);
     this.commitCard.querySelector('.history__card-name').textContent = this.commiterName;
+    this.commitCard.querySelector('.history__card-name').setAttribute('title', `${this.commiterName}`);
     this.commitCard.querySelector('.history__card-mail').textContent = this.commiterMail;
+    this.commitCard.querySelector('.history__card-mail').setAttribute('title', `${this.commiterMail}`);
     this.commitCard.querySelector('.history__card-comment').textContent = this.commiterMessage;
 
     return this.commitCard;

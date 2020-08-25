@@ -1,5 +1,5 @@
 import currentDate from './currentDate.js';
-import weekAgo from './weekAgo.js';
+import searchPeriod from './searchPeriod.js';
 
 'use strict';
 
@@ -18,9 +18,9 @@ export default function getMonth() {
       'ноябрь',
       'декабрь'
     ];
-  const dateWeekAgo = weekAgo();
+  const dayInPast = searchPeriod();
   const today = currentDate();
-  const monthWeekAgo = dateWeekAgo.slice(5, 7);
+  const monthInPast = dayInPast.slice(5, 7);
   const monthToday = today.slice(5, 7);
 
   function removeZero(num) {
@@ -31,14 +31,14 @@ export default function getMonth() {
       }
     }
 
-  const monthIndexWeekAgo = removeZero(monthWeekAgo) - 1;
+  const monthIndexInPast = removeZero(monthInPast) - 1;
   const monthIndexToday = removeZero(monthToday) - 1;
   let month;
 
-  if(monthIndexWeekAgo === monthIndexToday) {
-    month = `(${months[monthIndexWeekAgo]})`;
+  if(monthIndexInPast === monthIndexToday) {
+    month = `(${months[monthIndexInPast]})`;
   } else {
-    month = `(${months[monthIndexWeekAgo]}–${months[monthIndexToday]})`;
+    month = `(${months[monthIndexInPast]}–${months[monthIndexToday]})`;
   }
 
   return month;
