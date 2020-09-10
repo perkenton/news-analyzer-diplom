@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>О проекте | News analyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-  <link rel="icon" href="<%=require('./images/favicon.ico')%>">
+  <link rel="icon" href="<%=require('./images/favicon.ico').default%>">
   <script defer src="<%=htmlWebpackPlugin.files.js %>"></script>
 </head>
 <body>
@@ -46,22 +46,22 @@
         <div class="tech__list">
           <figure class="tech__item">
             <figcaption class="tech__description">HTML</figcaption>
-            <img src="<%=require('./images/html.svg')%>" alt="Логотип HTML" class="tech__image">
+            <img src="<%=require('./images/html.svg').default%>" alt="Логотип HTML" class="tech__image">
           </figure>
 
           <figure class="tech__item">
             <figcaption class="tech__description">CSS</figcaption>
-            <img src="<%=require('./images/css.svg')%>" alt="Логотип CSS" class="tech__image">
+            <img src="<%=require('./images/css.svg').default%>" alt="Логотип CSS" class="tech__image">
           </figure>
 
           <figure class="tech__item">
             <figcaption class="tech__description">Java Script</figcaption>
-            <img src="<%=require('./images/js.svg')%>" alt="Логотип Java Script" class="tech__image">
+            <img src="<%=require('./images/js.svg').default%>" alt="Логотип Java Script" class="tech__image">
           </figure>
 
           <figure class="tech__item">
             <figcaption class="tech__description">Webpack</figcaption>
-            <img src="<%=require('./images/webpack.svg')%>" alt="Логотип Webpack" class="tech__image">
+            <img src="<%=require('./images/webpack.svg').default%>" alt="Логотип Webpack" class="tech__image">
           </figure>
         </div>
       </div>
@@ -69,10 +69,10 @@
 
     <section class="about-author">
       <picture>
-        <source srcset="<%=require('./images/jacques-yves-cousteau-464.jpg')%>" media="(min-width: 768px)">
-        <source srcset="<%=require('./images/jacques-yves-cousteau-232.jpg')%>" media="(min-width: 541px)">
-        <source srcset="<%=require('./images/jacques-yves-cousteau-272.jpg')%>" media="(max-width: 540px)">
-        <img src="<%=require('./images/jacques-yves-cousteau-464.jpg')%>" alt="Фото автора"  class="about-author__photo">
+        <source srcset="<%=require('./images/jacques-yves-cousteau-464.jpg').default%>" media="(min-width: 768px)">
+        <source srcset="<%=require('./images/jacques-yves-cousteau-232.jpg').default%>" media="(min-width: 541px)">
+        <source srcset="<%=require('./images/jacques-yves-cousteau-272.jpg').default%>" media="(max-width: 540px)">
+        <img src="<%=require('./images/jacques-yves-cousteau-464.jpg').default%>" alt="Фото автора"  class="about-author__photo">
       </picture>
       <div class="about-author__text-wrap">
         <h2 class="about-author__title">Об авторе</h2>
@@ -118,10 +118,10 @@
 
       <div class="footer__social-icons">
         <a href="https://github.com/perkenton" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/github-icon.svg')%>" alt="Логотип гитхаба" class="footer__social-icon">
+          <img src="<%=require('./images/github-icon.svg').default%>" alt="Логотип гитхаба" class="footer__social-icon">
         </a>
         <a href="https://www.facebook.com" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/fb-icon.svg')%>" alt="Логотип фейсбука" class="footer__social-icon">
+          <img src="<%=require('./images/fb-icon.svg').default%>" alt="Логотип фейсбука" class="footer__social-icon">
         </a>
       </div>
     </footer>

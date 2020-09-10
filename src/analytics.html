@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Аналитика | News analyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-  <link rel="icon" href="<%=require('./images/favicon.ico')%>">
+  <link rel="icon" href="<%=require('./images/favicon.ico').default%>">
   <script defer src="<%=htmlWebpackPlugin.files.js %>"></script>
 </head>
 <body>
@@ -95,10 +95,10 @@
 
       <div class="footer__social-icons">
         <a href="https://github.com/perkenton" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/github-icon.svg')%>" alt="Логотип гитхаба" class="footer__social-icon">
+          <img src="<%=require('./images/github-icon.svg').default%>" alt="Логотип гитхаба" class="footer__social-icon">
         </a>
         <a href="https://www.facebook.com" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/fb-icon.svg')%>" alt="Логотип фейсбука" class="footer__social-icon">
+          <img src="<%=require('./images/fb-icon.svg').default%>" alt="Логотип фейсбука" class="footer__social-icon">
         </a>
       </div>
     </footer>

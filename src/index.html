@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная | News analyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-  <link rel="icon" href="<%=require('./images/favicon.ico')%>">
+  <link rel="icon" href="<%=require('./images/favicon.ico').default%>">
   <script defer src="<%=htmlWebpackPlugin.files.js %>"></script>
 </head>
 <body>
@@ -49,7 +49,7 @@
     </section>
 
     <section class="not-found" style="display: none;">
-      <img src="<%=require('./images/not-found_v1.svg')%>" alt="Грустный смайлик" class="not-found__sad-image">
+      <img src="<%=require('./images/not-found_v1.svg').default%>" alt="Грустный смайлик" class="not-found__sad-image">
       <h2 class="not-found__title">Ничего не&nbsp;найдено</h2>
       <p class="not-found__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
     </section>
@@ -69,10 +69,10 @@
 
     <section class="about-author">
       <picture>
-        <source srcset="<%=require('./images/jacques-yves-cousteau-464.jpg')%>" media="(min-width: 768px)">
-        <source srcset="<%=require('./images/jacques-yves-cousteau-232.jpg')%>" media="(min-width: 541px)">
-        <source srcset="<%=require('./images/jacques-yves-cousteau-272.jpg')%>" media="(max-width: 540px)">
-        <img src="<%=require('./images/jacques-yves-cousteau-464.jpg')%>" alt="Фото автора"  class="about-author__photo">
+        <source srcset="<%=require('./images/jacques-yves-cousteau-464.jpg').default%>" media="(min-width: 768px)">
+        <source srcset="<%=require('./images/jacques-yves-cousteau-232.jpg').default%>" media="(min-width: 541px)">
+        <source srcset="<%=require('./images/jacques-yves-cousteau-272.jpg').default%>" media="(max-width: 540px)">
+        <img src="<%=require('./images/jacques-yves-cousteau-464.jpg').default%>" alt="Фото автора"  class="about-author__photo">
       </picture>
       <div class="about-author__text-wrap">
         <h2 class="about-author__title">Об авторе</h2>
@@ -94,10 +94,10 @@
 
       <div class="footer__social-icons">
         <a href="https://github.com/perkenton" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/github-icon.svg')%>" alt="Логотип гитхаба" class="footer__social-icon">
+          <img src="<%=require('./images/github-icon.svg').default%>" alt="Логотип гитхаба" class="footer__social-icon">
         </a>
         <a href="https://www.facebook.com" class="footer__social-icon-link" target="_blank">
-          <img src="<%=require('./images/fb-icon.svg')%>" alt="Логотип фейсбука" class="footer__social-icon">
+          <img src="<%=require('./images/fb-icon.svg').default%>" alt="Логотип фейсбука" class="footer__social-icon">
         </a>
       </div>
     </footer>

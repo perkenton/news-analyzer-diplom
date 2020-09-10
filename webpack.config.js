@@ -51,17 +51,13 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|webp|ico|svg)$/i,
         use: [
-          'file-loader?name=./images/[name].[ext]&esModule=false',
+          'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
                 progressive: true,
                 quality: 65
-              },
-              // optipng.enabled: false will disable optipng
-              optipng: {
-                enabled: false,
               },
               pngquant: {
                 quality: [0.65, 0.90],
@@ -70,10 +66,9 @@ module.exports = {
               gifsicle: {
                 interlaced: false,
               },
-              // the webp option will enable WEBP
-              webp: {
-                quality: 75
-              }
+              optipng: {
+                enabled: false,
+              },
             }
           },
         ]
