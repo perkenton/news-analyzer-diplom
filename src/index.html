@@ -35,7 +35,7 @@
           type="search" 
           placeholder="Введите тему новости" 
           class="search__input search__input_is-valid"  
-          pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" 
+          pattern="^[а-яА-ЯёЁa-zA-Z0-9\s]+$"
           required>
         <button name="searchSubmit" type="submit" class="search__button search__button_is-active" disabled="">Искать</button>
         <span class="search__input-error" style="display: none;"></span>
