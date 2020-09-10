@@ -66,6 +66,9 @@ module.exports = {
               gifsicle: {
                 interlaced: false,
               },
+              optipng: {
+                enabled: false,
+              },
             }
           },
         ]
